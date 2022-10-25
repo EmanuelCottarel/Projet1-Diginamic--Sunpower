@@ -66,7 +66,7 @@ main {
   font-size: 16px;
 }
 main h1 {
-  margin: auto;
+  margin-top: 70px;
   font-size: 40px;
   text-align: center;
 }
@@ -98,4 +98,64 @@ main .article__footer--socials {
 main .article__footer--socials img {
   width: 40px;
   height: 40px;
+}
+
+footer {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+footer li {
+  list-style: none;
+  color: rgb(255, 255, 255);
+}
+footer a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer h5 {
+  color: #31CB00;
+}
+footer .footer__inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+  width: 80%;
+}
+footer .footer__rs {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+}
+footer .footer__menu {
+  display: flex;
+  flex-flow: column wrap;
+}
+footer .footer__info {
+  display: flex;
+  align-items: flex-start;
+}
+footer .footer__sitemap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+footer .footer__chevron {
+  display: flex;
+  align-items: center;
+}
+footer .footer p {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }/*# sourceMappingURL=partenaires.css.map */

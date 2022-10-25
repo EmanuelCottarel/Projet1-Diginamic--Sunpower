@@ -57,7 +57,59 @@ nav a {
   text-align: center;
 }
 
-.form__entreprises--submit {
+.contact {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+.contact h2 {
+  text-align: center;
+}
+.contact a {
+  text-decoration: none;
+}
+.contact li {
+  list-style: none;
+}
+.contact p {
+  font-size: 32px;
+  color: #000000;
+  font-weight: 10px;
+}
+.contact button {
+  width: 80px;
+  padding: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.contact__navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.contact__navigation--liste {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.contact__navigation--etape1, .contact__navigation--etape2, .contact__navigation--etape3 {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: #94DC1F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__form--entreprises, .contact__form--syndicats, .contact__form--particuliers, .contact__form--projet {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+.contact__submit {
+  width: 80px;
   background-image: linear-gradient(to right top, #06D5F7, #B4EE0E);
   border: none;
   padding: 5px;

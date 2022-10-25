@@ -64,7 +64,7 @@ main h1 {
   display: flex;
   justify-content: center;
   margin-top: 70px;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
   margin-bottom: 70px;
 }
@@ -93,12 +93,21 @@ main .ombriere p {
   text-align: start;
 }
 main .mapouter {
-  width: 100%;
   display: flex;
   justify-content: center;
-  margin-left: 50px;
+  margin-left: 225px;
+  position: relative;
+  text-align: center;
+  height: 800px;
+  width: 1450px;
 }
-main .mapouter iframe {
+main .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 800px;
+  width: 1500px;
+}
+main iframe {
   justify-content: center;
 }
 

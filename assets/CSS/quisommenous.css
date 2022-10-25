@@ -64,7 +64,7 @@ main h1 {
   display: flex;
   justify-content: center;
   margin-top: 70px;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
 }
 main .pr {
@@ -88,7 +88,7 @@ main ul {
   margin-top: 50px;
 }
 main li {
-  box-shadow: 10px 5px 5px rgb(97, 95, 95);
+  box-shadow: 5px 5px rgba(144, 144, 144, 0.3137254902);
 }
 
 footer {

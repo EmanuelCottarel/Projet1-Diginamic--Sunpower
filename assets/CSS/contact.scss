@@ -90,9 +90,77 @@ nav {
     }
 }
 
-.form__entreprises--submit{
-  background-image: linear-gradient(to right top, #06D5F7, #B4EE0E);
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
+.contact {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: center;
+
+    h2 {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+
+    }
+
+    p {
+        font-size: 32px;
+        color: $fourthColor;
+        font-weight: 10px;
+    }
+
+    button {
+        width: 80px;
+        padding: 5px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    &__navigation {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    &__navigation--liste {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    &__navigation--etape1,
+    &__navigation--etape2,
+    &__navigation--etape3 {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        background: $primaryColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__form--entreprises,
+    &__form--syndicats,
+    &__form--particuliers,
+    &__form--projet {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    &__submit {
+        width:80px;
+        background-image: linear-gradient(to right top, #06D5F7, #B4EE0E);
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+    }
 }

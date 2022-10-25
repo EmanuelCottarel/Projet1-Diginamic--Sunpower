@@ -100,7 +100,7 @@ main{
         display: flex;
         justify-content:center;
         margin-top: 70px;
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 600;
         margin-bottom: 70px;
     }
@@ -139,17 +139,26 @@ main{
 }
 
 .mapouter{
-    width:100%;
-    display:flex;
-    justify-content: center;
-    margin-left: 50px;
     
+    display: flex;
+    justify-content: center;
+    margin-left: 225px;
+    position:relative;
+    text-align:center;
+    height:800px;
+    width:1450px;
+}
+
+.gmap_canvas {
+        overflow:hidden;
+        background:none!important;
+        height:800px;
+        width:1500px;
+        }
 
     iframe{
         justify-content:center;
     }
-}
-
 }
 
 footer {

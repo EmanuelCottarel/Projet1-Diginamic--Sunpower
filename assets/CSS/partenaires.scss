@@ -103,7 +103,7 @@ main {
 
 
     h1 {
-        margin: auto;
+        margin-top: 70px;
         font-size: 40px;
         text-align: center;
     }
@@ -155,4 +155,84 @@ main {
     }
 
 
+}
+
+footer {
+
+    background-color: $fourthColor;
+    color: $fifthColor;
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+
+
+
+    li {
+        list-style: none;
+        color: $fifthColor;
+    }
+
+    a {
+        text-decoration: none;
+        color: $fifthColor;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    h5 {
+        color: $secondaryColor;
+    }
+
+
+    .footer {
+        &__inner {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-content: center;
+            width: 80%;
+        }
+
+        &__rs {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-content: center;
+        }
+
+        &__menu {
+            display: flex;
+            flex-flow: column wrap;
+
+        }
+
+        &__info {
+            display: flex;
+            align-items: flex-start;
+
+        }
+
+        &__sitemap {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+        }
+
+        &__chevron {
+            display: flex;
+            align-items: center;
+        }
+
+        p {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+    }
 }
