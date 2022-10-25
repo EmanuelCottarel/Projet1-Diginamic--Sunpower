@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Sunpower - Accueil</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="authors" content="El Medhi SBAI, Emanuel COTTAREL, Loai SADOUK, Vina MARIE-LUCE">
-    <meta name="description" content="Sunpower est une entreprise qui participe au développement des energies photovoltaiques">
+    <meta name="description"
+        content="Sunpower est une entreprise qui participe au développement des energies photovoltaiques">
+    <link rel="icon" href="assets/images/soleil.png" type="image/png">
 
     <link rel="stylesheet" href="./assets/CSS/style.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
     <header>
-       
+        <!-- NavBar -->
         <nav>
             <div class="nav__logo">
                 <img src="./assets/images/logoSunpower.png" alt="logobyteam3" srcset="">
@@ -20,26 +27,146 @@
 
             <ul>
                 <li><a href="">Accueil</a></li>
-                <li><a href="">Ombrières solaires</a></li>
-                <li><a href="">Qui sommes nous?</a></li>
-                <li><a href="">Activités</a></li>
-                <li><a href="">Partenaires</a></li>
-                <li><a href="">Contact</a></li>
-                
-
-                
-                
+                <li><a href="./pages/ombrièresolaire.html">Ombrières solaires</a></li>
+                <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
+                <li><a href="./pages/activites.html">Activités</a></li>
+                <li><a href="./pages/partenaires.html">Partenaires</a></li>
+                <li><a href="./pages/contact.html">Contact</a></li>
 
             </ul>
         </nav>
-
+        <!-- Fin NavBar -->
         <div class="header__banner">
-            <img src="./assets/images/" alt="" srcset="">
+            <h1> SunPower </h1>
         </div>
+
     </header>
 
+    <main>
+
+        <q> Le Solaire à portée demain ("de main") pour tous </q>
+
+        <p class="texte"> La société Sunpower conçoit et commercialise des panneaux solaires à haut
+            rendement (25%). Dans le cadre de ses activités Sunpower a développé des
+            ombrières solaires pour la recharge des véhicules électriques. </p>
+
+        <section class="cards">
+            <div class="card">
+                <div class="card__text">
+                    <h2>Ombrières Solaires</h2>
+                    <p class="ombre">
+                        Le développement des ombrières solaires pour la recharge des
+                        véhicules électriques constitue le pilier de notre développement.</p>
+                </div>
+                <div class="card__img" id="card1">
+
+                    <div class="card__img__overlay">
+                        <a href="./pages/ombrièresolaire.html"><img src="./assets/images/Chevron Right.png"
+                                alt="Lien permettant d'aller vers la page Ombrières solaires"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__text">
+                    <h2>Nos activités</h2>
+                    <p>
+                    
+                        <ul>
+                            <li>La R&D</li>
+                            <li>L’aide aux montages de projets à destination des entreprises et des
+collectivités</li>
+                            <li>La commercialisation des ombrières solaires auprès des entreprises,
+collectivités et particuliers </li>
+                        </ul>
+
+</p>
+                </div>
+                <div class="card__img" id="card2">
+                    <div class="card__img__overlay">
+                        <a href="./pages/activites.html"><img src="./assets/images/Chevron Right.png"
+                                alt="Lien permettant d'aller vers la page Ombrières solaires"></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+<!-- DEBUT FOOTER -->
     <footer>
-        
+        <div class="footer__inner">
+            <div class="footer__rs">
+                <ul>
+                    <li>
+                        <ion-icon size= "large" name="logo-facebook"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon size= "large" name="logo-linkedin"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon size= "large" name="logo-twitter"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon size= "large" name="logo-instagram"></ion-icon>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__info">
+
+                <ul>
+                    <li>
+                        <h5 id="info">Informations utiles</h5>
+                    </li>
+                    <li>Adresse :</li>
+                    <li> 2 rue de l'innovation<br> 38000 Grenoble</li>
+                    <li>Télephone : 0984303034</li>
+                </ul>
+            </div>
+
+            <div class="footer__menu">
+
+                <ul>
+                    <li>
+                        <h5>Menu de navigation</h5>
+                    </li>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./pages/ombrièresolaire.html">Ombrières solaires</a></li>
+                    <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
+                    <li><a href="./pages/activites.html">Activités</a></li>
+                    <li><a href="./pages/partenaires.html">Partenaires</a></li>
+                    <li><a href="./pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__sitemap">
+
+                <ul>
+                    <li>
+                        <h5>Plan du site</h5>
+                    </li>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./pages/ombrièresolaire.html">Ombrières solaires</a></li>
+                    <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
+                    <li><a href="#">Actualités</a></li>
+                    <li><a href="./pages/activites.html">Activités</a></li>
+                    <li><a href="./pages/partenaires.html">Partenaires</a></li>
+                    <li><a href="./pages/contact.html">Contact</a></li>
+                    <li><a href="#info">Informations utiles</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                </ul>
+               
+            </div>
+            <div class="footer__chevron">
+                <a href="#top"><ion-icon name="chevron-up-circle-outline" size="large"></ion-icon></a>
+            </div>
+        </div>
+        <p>&copy copyright 2022. Tous droits réservés. SUNPOWER.</p>
     </footer>
+    <!-- FIN FOOTER -->
 </body>
+
 </html>

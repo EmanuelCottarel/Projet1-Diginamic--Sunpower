@@ -1,0 +1,147 @@
+//Variables
+$primaryColor: #94DC1F; //vert clair
+$secondaryColor: #31CB00; //Vert foncé
+$thirdColor: #FFDF36; //Jaune
+$fourthColor: #000000; //Noir
+$fifthColor: rgb(255, 255, 255);
+
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Poppins&family=Space+Mono&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+
+
+
+    .nav__logo {
+
+        img {
+            height: 80px;
+        }
+
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        margin: 0px 15px;
+
+        :hover:not(:nth-child(6)) {
+            background-color: $primaryColor;
+        }
+
+    }
+
+
+
+    li {
+        margin: 0;
+        height: 80px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:nth-child(4){
+            background-color: $primaryColor;
+        }
+
+        &:nth-child(6) {
+            background-color: $thirdColor;
+            width: 150px;
+            height: 50px;
+            border-radius: 35px;
+            margin-left: 15px;
+
+            &:hover {
+                background-color: $primaryColor;
+            }
+
+
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 18px;
+        text-align: center;
+    }
+
+
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    font-size: 16px;
+    
+
+    h1{
+        margin: auto;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    article{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 130px;        
+    }
+        .article__img{
+            height: 450px;
+            width: 325px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            box-shadow: 5px 5px 0px #909090;
+            
+        }
+        .article__text{
+           
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+
+        }
+
+        h2{
+            margin: 0;
+            line-height: 16px;
+        }
+
+        ul{
+            list-style: none;
+            
+            li:before{
+                content:'- ';
+            }
+        }
+        
+
+}

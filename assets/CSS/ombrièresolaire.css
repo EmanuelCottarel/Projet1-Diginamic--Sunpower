@@ -40,7 +40,7 @@ nav li {
   align-items: center;
   justify-content: center;
 }
-nav li:nth-child(1) {
+nav li:nth-child(2) {
   background-color: #94DC1F;
 }
 nav li:nth-child(6) {
@@ -60,94 +60,46 @@ nav a {
   text-align: center;
 }
 
-.header__banner {
-  width: 100%;
-  height: 600px;
-  background-image: url("../images/banner.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+main h1 {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-.header__banner h1 {
-  margin: 0;
-  color: white;
-  font-size: 150px;
-  font-style: italic;
-}
-
-main {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main q {
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-  font-size: xx-large;
+  margin-top: 70px;
+  font-size: 50px;
   font-weight: 600;
+  margin-bottom: 70px;
 }
-main .texte {
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
+main h2 {
+  margin-top: 100px;
+  margin-left: 225px;
+}
+main a {
   font-size: large;
-  text-align: center;
+  margin-left: 225px;
+  padding-top: 100px;
 }
-main .ombre {
+main .ombriere {
   display: flex;
-  justify-content: start;
-  padding-top: 10px;
-}
-main .cards {
-  width: 100%;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
+  width: 80%;
+  justify-content: space-around;
+  margin: auto;
   align-items: center;
+  margin-top: 70px;
 }
-main .card {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin-bottom: 50px;
+main .ombriere img {
+  width: 40%;
 }
-main .card__text {
+main .ombriere p {
   width: 50%;
-  height: 250px;
+  text-align: start;
 }
-main .card #card1 {
-  background-image: url("../images/ombriere.jpg");
-}
-main .card #card2 {
-  background-image: url("../images/ingenieur.jpg");
-}
-main .card__img {
-  width: 50%;
-  height: 250px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: end;
-}
-main .card__img__overlay {
-  width: 20%;
-  height: 250px;
-  background-color: rgba(0, 0, 0, 0.3764705882);
+main .mapouter {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-left: 50px;
 }
-main .card__img__overlay :hover img {
-  scale: 1.1;
+main .mapouter iframe {
+  justify-content: center;
 }
 
 footer {
@@ -158,6 +110,7 @@ footer {
   width: 100%;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
 }
 footer li {
   list-style: none;
@@ -207,4 +160,4 @@ footer .footer p {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=ombrièresolaire.css.map */
