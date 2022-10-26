@@ -60,99 +60,9 @@ nav a {
   text-align: center;
 }
 
-.header__banner {
-  width: 100%;
-  height: 600px;
-  background-image: url("../images/banner.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header__banner h1 {
-  margin: 0;
-  color: white;
-  font-size: 150px;
-  font-style: italic;
-}
-
-main {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main q {
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-  font-size: xx-large;
-  font-weight: 600;
-}
-main .texte {
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-  font-size: large;
-  text-align: center;
-}
-main .ombre {
-  display: flex;
-  justify-content: start;
-  padding-top: 10px;
-}
-main .cards {
-  width: 100%;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .card {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin-bottom: 50px;
-}
-main .card__text {
-  width: 50%;
-  height: 250px;
-}
-main .card #card1 {
-  background-image: url("../images/ombriere.jpg");
-}
-main .card #card2 {
-  background-image: url("../images/ingenieur.jpg");
-}
-main .card__img {
-  width: 50%;
-  height: 250px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: end;
-}
-main .card__img__overlay {
-  width: 20%;
-  height: 250px;
-  background-color: rgba(0, 0, 0, 0.3764705882);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main .card__img__overlay :hover img {
-  scale: 1.1;
-}
-
 footer {
   background-color: #000000;
-  color: rgb(255, 255, 255);
+  color: #fff;
   display: flex;
   flex-flow: column wrap;
   width: 100%;
@@ -161,11 +71,11 @@ footer {
 }
 footer li {
   list-style: none;
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 footer a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 footer a:hover {
   text-decoration: underline;
@@ -321,14 +231,6 @@ footer .footer p {
   }
 }
 @media (max-width: 576px) {
-  .header__banner {
-    height: 250px;
-  }
-  .header__banner h1 {
-    color: white;
-    font-style: italic;
-    font-size: 70px;
-  }
   footer .footer__inner {
     width: 100%;
     display: flex;
@@ -345,23 +247,6 @@ footer .footer p {
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-}
-@media (max-width: 1339px) {
-  q {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 70px;
-    font-weight: 600;
-  }
-  .header__banner {
-    height: 250px;
-  }
-  .header__banner h1 {
-    color: white;
-    font-style: italic;
-    font-size: 70px;
   }
 }
 @media (max-width: 900px) {

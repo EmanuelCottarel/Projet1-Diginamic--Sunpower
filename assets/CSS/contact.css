@@ -1,66 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Poppins&family=Space+Mono&display=swap");
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  width: 100%;
-  margin: 0;
-}
-
-nav {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-}
-nav .nav__logo img {
-  height: 80px;
-}
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  margin: 0px 15px;
-}
-nav ul :hover:not(:nth-child(6)) {
-  background-color: #94dc1f;
-}
-nav li {
-  margin: 0;
-  height: 80px;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-nav li:nth-child(6) {
-  background-color: #94dc1f;
-  width: 150px;
-  height: 50px;
-  border-radius: 35px;
-  margin-left: 15px;
-}
-nav li:nth-child(6):hover {
-  background-color: #94dc1f;
-}
-nav a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 18px;
-  text-align: center;
-}
-
-h1 {
-  text-align: center;
-}
-
+@charset "UTF-8";
+/* Import du Style.css, Contient les éléments communs à toutes les pages: la nav et le footer  */
+@import url("./style.scss");
 .contact {
   display: flex;
   flex-flow: column wrap;
@@ -74,7 +14,7 @@ h1 {
   padding: 20px;
 }
 .contact input :valid {
-  border-color: #94dc1f;
+  border-color: #94DC1F;
 }
 .contact input :invalid {
   border-color: red;
@@ -119,15 +59,15 @@ h1 {
   width: 60px;
   height: 60px;
   border-radius: 30px;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .contact #number1 {
-  background-color: #94dc1f;
-  border: 1px solid #94dc1f;
+  background-color: #94DC1F;
+  border: 1px solid #94DC1F;
 }
 .contact__choix--liste {
   display: flex;
@@ -147,7 +87,7 @@ h1 {
   cursor: pointer;
 }
 .contact__choix--cible:hover {
-  background-color: #94dc1f;
+  background-color: #94DC1F;
   border: none;
   scale: 1.05;
 }
@@ -156,29 +96,10 @@ h1 {
   flex-flow: column wrap;
   justify-content: center;
 }
-.contact .button-34 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 999px;
-  box-shadow: #5e5df0 0 10px 20px -10px;
-  box-sizing: border-box;
-  background-color: linear-gradiant(#06d5f7, #b4ee0e);
-  cursor: pointer;
-  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 8px 18px;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
+.contact__submit {
+  width: 80px;
+  background-image: linear-gradient(to right top, #06d5f7, #b4ee0e);
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
 }/*# sourceMappingURL=contact.css.map */
