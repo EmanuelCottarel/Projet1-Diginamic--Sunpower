@@ -30,7 +30,7 @@ nav ul {
   margin: 0px 15px;
 }
 nav ul :hover:not(:nth-child(6)) {
-  background-color: #94DC1F;
+  background-color: #94dc1f;
 }
 nav li {
   margin: 0;
@@ -41,14 +41,14 @@ nav li {
   justify-content: center;
 }
 nav li:nth-child(6) {
-  background-color: #94DC1F;
+  background-color: #94dc1f;
   width: 150px;
   height: 50px;
   border-radius: 35px;
   margin-left: 15px;
 }
 nav li:nth-child(6):hover {
-  background-color: #94DC1F;
+  background-color: #94dc1f;
 }
 nav a {
   text-decoration: none;
@@ -57,11 +57,27 @@ nav a {
   text-align: center;
 }
 
+h1 {
+  text-align: center;
+}
+
 .contact {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
   align-content: center;
+  width: 450px;
+  margin: auto;
+}
+.contact input {
+  height: 50px;
+  padding: 20px;
+}
+.contact input :valid {
+  border-color: #94dc1f;
+}
+.contact input :invalid {
+  border-color: red;
 }
 .contact h2 {
   text-align: center;
@@ -86,32 +102,83 @@ nav a {
 }
 .contact__navigation {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-around;
 }
 .contact__navigation--liste {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+.contact .contact__navigation--line {
+  border-bottom: 1px solid #000000;
+  width: 135px;
 }
 .contact__navigation--etape1, .contact__navigation--etape2, .contact__navigation--etape3 {
   width: 60px;
   height: 60px;
   border-radius: 30px;
-  background: #94DC1F;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.contact__form--entreprises, .contact__form--syndicats, .contact__form--particuliers, .contact__form--projet {
+.contact #number1 {
+  background-color: #94dc1f;
+  border: 1px solid #94dc1f;
+}
+.contact__choix--liste {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
 }
-.contact__submit {
-  width: 80px;
-  background-image: linear-gradient(to right top, #06D5F7, #B4EE0E);
-  border: none;
+.contact__choix--cible {
+  border: 1px solid #000000;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
   padding: 5px;
-  border-radius: 5px;
+  width: 350px;
+  height: 50px;
+  cursor: pointer;
+}
+.contact__choix--cible:hover {
+  background-color: #94dc1f;
+  border: none;
+  scale: 1.05;
+}
+.contact__form--entreprises-syndic, .contact__form--particuliers, .contact__form--projet {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+.contact .button-34 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  background-color: linear-gradiant(#06d5f7, #b4ee0e);
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
 }/*# sourceMappingURL=contact.css.map */

@@ -12,9 +12,15 @@
   <link rel="icon" href="../assets/images/soleil.png" type="image/png">
 
   <link rel="stylesheet" href="../assets/CSS/contact.css">
-
+  <script src="./assets/JS/burger.js" defer></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type = "text/javascript">
+    (function(){
+    emailjs.init("DwZJ4WwVhTbkusxOt");
+    })();
+  </script>
 </head>
 
 <body>
@@ -24,6 +30,25 @@
       <div class="nav__logo">
         <img src="../assets/images/logoSunpower.png" alt="logobyteam3" srcset="">
       </div>
+
+      <!-- burger menu -->
+      <nav class="burger">
+        <div id="burger-menu">
+            <span></span>
+          </div>
+          
+          <div id="menu">
+              <ul>
+                <li><a href="">Accueil</a></li>
+                <li><a href="./pages/ombrièresolaire.html">Ombrières solaires</a></li>
+                <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
+                <li><a href="./pages/activites.html">Activités</a></li>
+                <li><a href="./pages/partenaires.html">Partenaires</a></li>
+                <li><a href="./pages/contact.html">Contact</a></li>
+              </ul>
+          </div>
+
+        </nav>
 
       <ul>
         <li><a href="../index.html">Accueil</a></li>
@@ -41,45 +66,38 @@
     <main>
       <!-- TITRE -->
       <h1>Contact</h1>
-      <!-- NAVIGATION FORMULAIRE -->
+      
       <div class="contact">
+        <!-- NAVIGATION FORMULAIRE -->
         <div class="contact__navigation">
-          <ul class="contact__navigation--liste">
-            <li class="contact__navigation--etape1">1</li>
-            <li class="contact__navigation--etape2">2</li>
-            <li class="contact__navigation--etape3">3</li>
-          </ul>
-        </div>
+          <div class="contact__navigation--liste">
+            <div class="contact__navigation--etape1" id="number1">1 </div>
+            <div class="contact__navigation--line"></div>
+            <div class="contact__navigation--etape2" id="number2">2</div>
+              <div class="contact__navigation--line"></div>
+            <div class="contact__navigation--etape3" id="number3">3</div>
+          
+          </div>
 
-        <h2>Qui êtes-vous ?</h2>
+        <h2 id="titreForm1">Qui êtes-vous ?</h2>
 
         <div class="contact__choix">
           <ul class="contact__choix--liste">
-            <li class="contact__choix--cible1"><a href="">Entreprises ou collectivités<ion-icon
-                  name="chevron-forward-outline"></ion-icon></a>
+            <li class="contact__choix--cible" id="choixEntreprise">Entreprises ou collectivités<ion-icon
+                  name="chevron-forward-outline"></ion-icon>
             </li>
-            <li class="contact__choix--cible2"><a href="">Syndicats de copropriété<ion-icon
-                  name="chevron-forward-outline"></ion-icon></a>
+            <li class="contact__choix--cible" id="choixSyndicats">Syndicats de copropriété<ion-icon
+                  name="chevron-forward-outline"></ion-icon>
             </li>
-            <li class="contact__choix--cible3"><a href="">Un particulier<ion-icon name="chevron-forward-outline">
-                </ion-icon></a>
+            <li class="contact__choix--cible" id="choixParticuliers">Un particulier<ion-icon name="chevron-forward-outline">
+                </ion-icon>
             </li>
           </ul>
         </div>
-
-
-        <div class="contact">
-          <div class="contact__navigation">
-            <ul class="contact__navigation--liste">
-              <li class="contact__navigation--etape1">1</li>
-              <li class="contact__navigation--etape2">2</li>
-              <li class="contact__navigation--etape3">3</li>
-            </ul>
-          </div>
-          <h2>Donnez nous quelques informations sur vous</h2>
-        </div>
-
-        <form class="contact__form--entreprises">
+        
+          <h2 id="titreForm2">Donnez nous quelques informations sur vous</h2>
+        
+        <form class="contact__form--entreprises-syndic">
           <label for="Raison sociale">Raison sociale</label>
           <input type="text" placeholder="Société Doe" minlength="2" required>
           <label for="nom">Nom</label>
@@ -96,60 +114,33 @@
           <input type="tel" placeholder="0984303034" maxlength="10" required>
           <label for="tel">Joindre un document en format .pdf</label>
           <input type="file" maxlength="10" accept="pdf">
-        </form>
-
-        <form class="contact__form--syndicats">
-          <label for="Raison sociale">Raison sociale</label>
-          <input type="text" placeholder="Société Doe" minlength="2" required>
-          <label for="nom">Nom</label>
-          <input type="text" placeholder="Doe" minlength="2" required>
-          <label for="prenom">Prénom</label>
-          <input type="text" placeholder="John" minlength="2" required>
-          <label for="adresse">Adresse</label>
-          <input type="text" placeholder="40 rue Louis Lépine" minlength="5" required>
-          <label for="code postal">Code postal</label>
-          <input type="number" placeholder="34000" minlength="5" required>
-          <label for="mail">Mail</label>
-          <input type="mail" placeholder="johndoe@gmail.com" required>
-          <label for="tel">Téléphone</label>
-          <input type="tel" placeholder="0984303034" maxlength="10" required>
-          <label for="tel">Joindre un document en format .pdf</label>
-          <input type="file" maxlength="10" accept="pdf">
-          <button>Précédent</button>
-          <button>Suivant</button>
         </form>
 
         <form class="contact__form--particuliers">
           <label for="nom">Nom</label>
-          <input type="text" placeholder="Doe" minlength="2" required>
+          <input type="text" id="fromSurname" placeholder="Doe" minlength="2" required>
           <label for="prenom">Prénom</label>
-          <input type="text" placeholder="John" minlength="2" required>
+          <input type="text" id="fromName" placeholder="John" minlength="2" required>
           <label for="mail">Mail</label>
-          <input type="mail" placeholder="johndoe@gmail.com" required>
+          <input type="mail" id="fromEmail" placeholder="johndoe@gmail.com" required>
           <label for="tel">Téléphone</label>
-          <input type="tel" placeholder="0984303034" maxlength="10" required>
-          <button>Précédent</button>
-          <button>Suivant</button>
+          <input type="tel" id="fromPhone" placeholder="0984303034" maxlength="10" required>
         </form>
 
-        <div class="contact">
-          <div class="contact__navigation">
-            <ul class="contact__navigation--liste">
-              <li class="contact__navigation--etape1">1</li>
-              <li class="contact__navigation--etape2">2</li>
-              <li class="contact__navigation--etape3">3</li>
-            </ul>
-          </div>
-          <h2>Parlez nous de votre projet</h2>
-        </div>
+          <h2 id="titreForm3">Parlez nous de votre projet</h2>
 
         <form class="contact__form--projet">
           <label for="texte">Description du projet (500 caractères maximum)</label>
           <textarea rows="10" cols="50" maxlength="500" required></textarea>
-          <input type="submit" class="contact__submit">
+          <input id="message" type="submit" class="button-34">
+          <span id="msg_success">Message envoyé avec succès !</span>
         </form>
         
+        <button id="button__back" class="button__back2">Précédent</button>
+        <button id="button__next">Suivant</button>
       </div>
     </main>
+
+    <script src="../assets/JS/form.js"></script>
     <!-- FIN MAIN -->
 </body>
