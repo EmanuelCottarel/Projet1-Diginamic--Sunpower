@@ -1,8 +1,8 @@
-let burgerMenu = document.getElementById('burger-menu');
+const burgerMenu = document.querySelector('#burger-menu');
 
-let overlay = document.getElementById('menu');
+const overlay = document.querySelector('#menu');
 
-burgerMenu.addEventListener('click', function() {
+burgerMenu.onclick= function() {
   this.classList.toggle("close");
   overlay.classList.toggle("overlay");
-});
+};

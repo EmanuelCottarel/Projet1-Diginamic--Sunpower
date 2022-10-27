@@ -6,8 +6,9 @@ const etape3 = document.querySelector("#number3");
 // SELECTION DES FORMULAIRES DANS LE DOM
 const form1 = document.querySelector(".contact__choix");
 const form2 = document.querySelector(".contact__form--entreprises-syndic");
-const form3 = document.querySelector(".contact__form--particuliers");
-const form4 = document.querySelector(".contact__form--projet");
+const form3 = document.querySelector(".contact__form--projet");
+const form4 = document.querySelector(".contact__form--particuliers");
+const form5 = document.querySelector(".contact__form--question");
 
 //SELECTION DES TITRES DES FORMULAIRES DANS LE DOM
 const titreForm1 = document.querySelector("#titreForm1");
@@ -16,125 +17,234 @@ const titreForm3 = document.querySelector("#titreForm3");
 
 // SELECTION DES BOUTONS DANS LE DOM
 const buttonBack = document.querySelector("#button__back");
+const buttonBack2 = document.querySelector("#button__back2");
 const buttonNext = document.querySelector("#button__next");
+
+//BOUTON SUBMIT
+////SUBMIT FORM QUESTION
 const buttonSubmit = document.querySelector("#message");
+const submitFormParticulier=document.querySelector(".submitFormParticulier");
+////SUBMIT FORM ENTREPRISES ET COLLECTIVITES
+const submitFormEntreprise=document.querySelector(".submitFormEntreprise");
+
+
+// SELECTION DES CHOIX SUR LE FORMULAIRE 1
+const choixEntreprise = document.querySelector("#choixEntreprise");
+const choixSyndicats = document.querySelector("#choixSyndicats");
+const choixParticuliers = document.querySelector("#choixParticuliers");
 
 // SELECTION DU MESSAGE DANS LE DOM
-const msgSuccess = document.querySelector("#msg_success")
+const msgSuccess = document.querySelector("#msg_success");
 
-
-// LES FORMULAIRES, LES ETAPLES TITRES, LES BOUTONS ET LE MESSAGE SONT MASQUES PAR DEFAUT
+// LES FORMULAIRES, LES BOUTONS ET LE MESSAGE SONT MASQUES PAR DEFAUT
+///Si le JS n'est pas executé, les éléments sont affichés par défaut et le formulaire peut toujour etre rempli
 
 form2.style.display = "none";
 form3.style.display = "none";
 form4.style.display = "none";
+form5.style.display = "none";
 
 titreForm2.style.display = "none";
 titreForm3.style.display = "none";
 
 buttonBack.style.display = "none";
 buttonNext.style.display = "none";
-buttonSubmit.style.display ="none";
+buttonSubmit.style.display = "none";
+submitFormParticulier.style.display = "none";
+submitFormEntreprise.style.display = "none";
+
 
 msgSuccess.style.display = "none";
 
+
 // FONCTIONS
 
-    //FONCTION QUI PERMET D'AFFICHER LES BOUTONS SUIVANTS ET PRECEDENTS
+//FONCTION QUI PERMET D'AFFICHER LES BOUTONS SUIVANTS ET PRECEDENTS
 
-    function afficherBouton(){
-        buttonBack.style.display = "block";
-        buttonNext.style.display = "block"; 
+function afficherBouton() {
+  buttonBack.style.display = "block";
+  buttonNext.style.display = "block";
+}
+
+
+//Fonction permettant de changer les pages du formulaire. 
+function changePage() {
+    if (whichForm === 1) {                            
+      form1.style.display = "flex";
+      form2.style.display = "none";
+      form3.style.display = "none";
+      form4.style.display = "none";
+      form5.style.display = "none";
+  
+      buttonBack.style.display = "none";
+      buttonNext.style.display = "none";
+      submitFormEntreprise.style.display = "none";
+      submitFormParticulier.style.display = "none";
+      
+      titreForm1.innerHTML="Qui êtes-vous?";
+      
+    } else if (whichForm === 2) {
+      form1.style.display = "none";
+      form2.style.display = "flex";
+      form3.style.display = "none";
+      form4.style.display = "none";
+      form5.style.display = "none";
+  
+      afficherBouton();
+      submitFormParticulier.style.display = "none";
+      submitFormEntreprise.style.display = "none";
+      
+      titreForm1.innerHTML="Donnez nous quelques informations sur vous";
+      
+      
+    } else if (whichForm === 3) {
+      form1.style.display = "none";
+      form2.style.display = "none";
+      form3.style.display = "flex";
+      form4.style.display = "none";
+      form5.style.display = "none";
+  
+      buttonBack.style.display = "block";
+      buttonNext.style.display = "none";
+      submitFormEntreprise.style.display = "block";
+      submitFormParticulier.style.display = "none";
+      
+      
+      
+      titreForm1.innerHTML="Parlez nous de votre projet";
+      
+    } else if (whichForm === 4) {
+      form1.style.display = "none";
+      form2.style.display = "none";
+      form3.style.display = "none";
+      form4.style.display = "flex";
+      form5.style.display = "none";
+  
+      afficherBouton();
+      buttonBack.onclick = function () {
+        whichForm = 1;
+        changePage();
+        changeCouleurEtape()
+      };
+      
+       titreForm1.innerHTML="Donnez nous quelques informations sur vous";
+      submitFormParticulier.style.display = "none";
+      
+    } else if (whichForm === 5) {
+      form1.style.display = "none";
+      form2.style.display = "none";
+      form3.style.display = "none";
+      form4.style.display = "none";
+      form5.style.display = "flex";
+  
+      afficherBouton();
+      buttonBack.onclick = function () {
+        whichForm = 4;
+        changePage();
+        changeCouleurEtape()
+      };
+      
+      
+      buttonNext.style.display = "none";
+      submitFormParticulier.style.display = "block";
+      
+      titreForm1.innerHTML="Quelle est votre question?";
+     
     }
-
-    //FONCTION QUI PERMET DE CHANGER LA COULEUR DES NOMBRES
-    //  etapeX = Nombre à afficher en blanc
-    //  etapeY = Nombre à afficher en vert
     
-    function changerEtape(etapeX, etapeY){
-        etapeX.style.backgroundColor = "#fff";
-        etapeX.style.borderColor = "#000";
-
-        etapeY.style.backgroundColor = "#94dc1f";
-        etapeY.style.borderColor = "#94dc1f";
-    }
-
-    //FONCTION QUI PERMET D'AFFICHER UN TITRE ET D'EN MASQUER UN AUTRE
-    //  titreFormX = Titre du formulaire à masquer
-    //  titreFormY = Titre du formulaire à afficher
-
-    function changerTitre(titreFormX, titreFormY){
-        titreFormX.style.display = "none";
-        titreFormY.style.display = "block";
-    }
-
-    //FONCTION QUI PERMET D'AFFICHER UN FORMULAIRE A LA FOIS
-    //FormX = Formulaire à masquer
-    //FormY = Formulaire à afficher
-
-    function changerForm(formX, formY){
-        formX.style.display = "none";
-        formY.style.display = "flex";
+    console.log(whichForm)
+  }
+  
+  //Fonction permettant de changer la couleur des numéros
+  function changeCouleurEtape(){
+  if(whichForm===1){
+      etape1.style.backgroundColor = "#94dc1f";
+      etape1.style.borderColor = "#94dc1f";
+    
+      etape2.style.backgroundColor = "#fff";
+      etape2.style.borderColor = "#000";
+    
+      etape3.style.backgroundColor = "#fff";
+      etape3.style.borderColor = "#000";
         
-        
-    }
+  }else if(whichForm===2 || whichForm===4){
+      etape1.style.backgroundColor = "#fff";
+      etape1.style.borderColor = "#000";
+    
+      etape2.style.backgroundColor = "#94dc1f";
+      etape2.style.borderColor = "#94dc1f";
+    
+      etape3.style.backgroundColor = "#fff";
+      etape3.style.borderColor = "#000";
+      
+     
+  }else if(whichForm===3 || whichForm===5){
+      etape1.style.backgroundColor = "#fff";
+      etape1.style.borderColor = "#000";
+    
+      etape2.style.backgroundColor = "#fff";
+      etape2.style.borderColor = "#000";
+    
+      etape3.style.backgroundColor = "#94dc1f";
+      etape3.style.borderColor = "#94dc1f";
+      
+     
+  }
+  }
 
 
-// ON AFFICHE LE FORM2 AU CLIC SUR "ENTREPRISES" OU "SYNDICATS"
+// WhichForm permet de définir à quelle étape du formulaire on se trouve. Elle est incrémentée quand on apsse à l'étape suivante 
+let whichForm = 1;
 
-const choixEntreprise = document.querySelector("#choixEntreprise");
-const choixSyndicats = document.querySelector("#choixSyndicats");
-
-
-choixEntreprise.onclick = function(){
-    changerEtape(etape1, etape2);
-    changerTitre(titreForm1, titreForm2);
-    changerForm(form1, form2)
-    afficherBouton();
-}
-
-choixSyndicats.onclick = function(){
-    changerEtape(etape1, etape2);
-    changerTitre(titreForm1, titreForm2);
-    changerForm(form1, form2)
-    afficherBouton()
-}
+changeCouleurEtape()
 
 
+//EVENEMENTS ONCLICK
 
-
-
-
-
-// ON AFFICHE LE FORM3 AU CLIC SUR "PARTICULIER"
-
-const choixParticuliers = document.querySelector("#choixParticuliers");
-
-choixParticuliers.onclick = function(){
-    changerEtape(etape1, etape2);
-    changerTitre(titreForm1, titreForm2);
-    changerForm(form1, form3);
-    afficherBouton()
-    buttonSubmit.style.display = "block";
-}
-
-
-
-
-
-
-
-// ON MASQUE LE FORM2 ET ON AFFICHE LE FORM4
-
+//Au clic sur le bouton "Suivant", whichForm est incrémenté de 1, l'étape suivante du formulaire s'affiche
 buttonNext.onclick = function () {
-    changerForm(form2 , form4)
-    changerEtape(etape2 , etape3)
-}
+  whichForm++;
+  console.log(whichForm);
+  changePage();
+  changeCouleurEtape();
+};
 
-buttonBack.onclick = function(){
-    changerForm(form4 , form2)
-    changerEtape(etape3 , etape2)
-}
+//Au clic sur le bouton "Entreprise", whichForm est incrémenté de 1, l'étape suivante du formulaire s'affiche
+choixEntreprise.onclick = function () {
+  whichForm++;
+  console.log(whichForm);
+  changePage();
+  changeCouleurEtape();
+};
+
+//Au clic sur le bouton "Syndicats", whichForm est incrémenté de 1, l'étape suivante du formulaire s'affiche
+choixSyndicats.onclick = function () {
+  whichForm++;
+  console.log(whichForm);
+  changePage();
+  changeCouleurEtape();
+};
+
+//Au clic sur le bouton "Je veux juste poser une question", whichForm prend la valeur 4, ce qui correspond à la 2e page du formulaire Questions
+choixParticuliers.onclick = function () {
+  whichForm = 4;
+  console.log(whichForm);
+  changePage();
+  changeCouleurEtape();
+};
+
+//Au clic sur le bouton "Suivant", whichForm est décrémenté de 1, l'étape précédente du formulaire s'affiche
+buttonBack.onclick = function () {
+  whichForm--;
+  console.log(whichForm);
+  changePage();
+  changeCouleurEtape();
+};
+
+
+
+
+
 
 
 
@@ -163,20 +273,6 @@ buttonBack.onclick = function(){
 // }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // function sendMail(params){
 //     let tempParams = {
 //         from_surname: document.getElementById("fromSurname").value,
@@ -203,29 +299,3 @@ buttonBack.onclick = function(){
 
 
 
-
-// function Verif() {
-//     var rempli=0;
-//         if(idInput.value==''){rempli++;}
-//         if(document.forms['formulaire'].elements['notesB'].value==''){rempli++;}
-
-//       if(rempli==0) {
-//             return true;
-//         } else {
-//             alert('Veuillez remplir tous les champs');
-//             return false;
-//         }
-//     }
-
-// function Verif (){
-//     let rempli=0;
-//         if (IdInput.value=""){
-//             rempli++
-            
-//         }
-        
-//         if(rempli > 0){
-            
-//         }
-        
-// }

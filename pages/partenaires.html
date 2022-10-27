@@ -12,7 +12,7 @@
     <link rel="icon" href="../assets/images/soleil.png" type="image/png">
 
     <link rel="stylesheet" href="../assets/CSS/partenaires.css">
-    <script src="./assets/JS/burger.js" defer></script>
+    <script src="../assets/JS/burger.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
@@ -20,39 +20,42 @@
 <body>
     <header>
         <!-- NavBar -->
-        <nav>
-            <div class="nav__logo">
-                <img src="../assets/images/logoSunpower.png" alt="logobyteam3">
-            </div>
+        <nav class="nav__main">
+            <!-- NavBar logo -->
+            <div class="nav__main--logo">
+                <img src="../assets/images/logoSunpower.png" alt="logobyteam3" srcset="">
+            </div>                
+             
+            <!-- Burger menu -->
+            <nav class="nav__main--burger">
+            <div id="burger-menu">
+                <span></span>
+              </div>
+              
+              <div id="menu">
+                  <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="./ombrieresolaire.html">Ombrières solaires</a></li>
+                    <li><a href="./quisommenous.html">Qui sommes nous?</a></li>
+                    <li><a href="./activites.html">Activités</a></li>
+                    <li><a href="./partenaires.html">Partenaires</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                  </ul>
+              </div>
+            </nav>
 
-            <!-- burger menu -->
-            <nav class="burger">
-                <div id="burger-menu">
-                    <span></span>
-                  </div>
-                  
-                  <div id="menu">
-                      <ul>
-                        <li><a href="">Accueil</a></li>
-                        <li><a href="./pages/ombrièresolaire.html">Ombrières solaires</a></li>
-                        <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
-                        <li><a href="./pages/activites.html">Activités</a></li>
-                        <li><a href="./pages/partenaires.html">Partenaires</a></li>
-                        <li><a href="./pages/contact.html">Contact</a></li>
-                      </ul>
-                  </div>
-    
-                </nav>
+            <!-- Nav classique -->
+          <nav class="nav__main--menu">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="./ombrieresolaire.html">Ombrières solaires</a></li>
+                    <li><a href="./quisommenous.html">Qui sommes nous?</a></li>
+                    <li><a href="./activites.html">Activités</a></li>
+                    <li><a href="./partenaires.html">Partenaires</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
 
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="./ombrièresolaire.html">Ombrières solaires</a></li>
-                <li><a href="../pages/quisommenous.html">Qui sommes nous?</a></li>
-                <li><a href="../pages/activites.html">Activités</a></li>
-                <li><a href="../pages/partenaires.html">Partenaires</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-
-            </ul>
+                </ul>
+            </nav>
         </nav>
 
         <main>
@@ -94,10 +97,10 @@
                     <div class="article__footer">
                         <div class="article__footer--socials">
                             <p>Réseaux de notre partenaire:</p>
-                            <a href="https://fr-fr.facebook.com/cea.pageofficielle/" target="_blank"><img src="../assets/images/FacebookBlack.png" alt="Acceder au Facebook du CEA"></a>
-                            <a href="https://www.instagram.com/cea_officiel/" target="_blank"><img src="../assets/images/InstagramBlack.png" alt="Acceder au Instagram du CEA"></a>
-                            <a href="https://twitter.com/ceaparissaclay" target="_blank"><img src="../assets/images/TwitterBlack.png" alt="Acceder au Twitter du CEA"></a>
-                            <a href="https://fr.linkedin.com/company/cea" target="_blank"><img src="../assets/images/LinkedInBlack.png" alt="Acceder au LinkedIn du CEA"></a>
+                            <a href="https://fr-fr.facebook.com/cea.pageofficielle/" target="_blank" class="reseaux__socials"><img  src="../assets/images/FacebookBlack.png" alt="Acceder au Facebook du CEA"></a>
+                            <a href="https://www.instagram.com/cea_officiel/" target="_blank" class="reseaux__socials"><img  src="../assets/images/InstagramBlack.png" alt="Acceder au Instagram du CEA"></a>
+                            <a href="https://twitter.com/ceaparissaclay" target="_blank" class="reseaux__socials"><img src="../assets/images/TwitterBlack.png" alt="Acceder au Twitter du CEA"></a>
+                            <a href="https://fr.linkedin.com/company/cea" target="_blank" class="reseaux__socials"> <img src="../assets/images/LinkedInBlack.png" alt="Acceder au LinkedIn du CEA"></a>
                         </div>
                         <p>Site Web: https://www.cea.fr</p>
                     </div>
@@ -110,7 +113,7 @@
                         </div>
 
                         <div class="article__header--title">
-                            <h2>PSA Peugeot-Citroën</h2>
+                            <h2 class="h2">PSA Peugeot-Citroën</h2>
                         </div>
                     </div>
                     <div class="article__text">
@@ -192,7 +195,7 @@
                         <h5>Plan du site</h5>
                     </li>
                     <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="../pages/ombrièresolaire.html">Ombrières solaires</a></li>
+                    <li><a href="../pages/ombrieresolaire.html">Ombrières solaires</a></li>
                     <li><a href="../pages/quisommenous.html">Qui sommes nous?</a></li>
                     <li><a href="#">Actualités</a></li>
                     <li><a href="../pages/activites.html">Activités</a></li>

@@ -8,7 +8,10 @@ $thirdColor: #FFDF36; //Jaune
 $fourthColor: #000000; //Noir
 $fifthColor: #fff; //Blanc
 
-
+//Surligne la page active dans la navbar
+nav li:nth-child(5){
+    background-color: $primaryColor;
+}
 
 main {
     width: 80%;
@@ -45,6 +48,7 @@ main {
 
 
             }
+            
         }
 
         &__text{
@@ -70,4 +74,34 @@ main {
 
 
 }
+
+@media (max-width: 1198px){
+
+    .article {
+        
+        &__header {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &--img{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    p{
+        text-align: start;
+    }
+}
+
+@media (max-width: 830px){
+
+        &--img{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
 

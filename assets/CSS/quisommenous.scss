@@ -2,47 +2,189 @@
 @import url("./style.css");
 
 //Variables
-$primaryColor: #94DC1F; //vert clair
-$secondaryColor: #31CB00; //Vert foncé
-$thirdColor: #FFDF36; //Jaune
+$primaryColor: #94dc1f; //vert clair
+$secondaryColor: #31cb00; //Vert foncé
+$thirdColor: #ffdf36; //Jaune
 $fourthColor: #000000; //Noir
 $fifthColor: #fff; //Blanc
 
-
-main{
-    h1{
-        display: flex;
-        justify-content:center;
-        margin-top: 70px;
-        font-size: 40px;
-        font-weight: 600;
-    }
-
-    .pr{
-        width: 80% ;
-        margin:auto;
-        margin-top: 50px;
-    }
-
-    h2{
-        font-size:xx-large;
-    }
-
-    p{
-        display: flex;
-        justify-content: center;
-        font-size: xx-large;
-        text-align: center;
-    }
-
-    ul{
-        display: flex;
-        justify-content: space-around;
-        list-style: none;
-        margin-top: 50px;
-    }
-        li{
-            box-shadow :5px 5px #90909050;
-        }
+//Surligne la page active dans la navbar
+nav li:nth-child(3) {
+  background-color: $primaryColor;
 }
 
+main {
+  h1 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items:center;
+    margin-top: 70px;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .pr {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+ .pr__presentation{
+   display: flex;
+flex-flow: column wrap;
+   justify-content: flex-end;
+width: 70%;
+}
+  .pr__immeuble {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 550px;
+    margin-left: 100px;
+    margin-right: 0;
+    float: center;
+  }
+
+  .pr__immeuble img {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    
+  }
+
+  figcaption{
+    background-color: $primaryColor;
+    color: $fifthColor;
+    padding: 5px;
+    text-align: center;
+    font-style: italic;
+  }
+
+  h2 {
+    font-size: xx-large;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 0;
+    width: 80%;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 5px 5px #90909050;
+  }
+
+  .pr {
+    ul :hover {
+      scale: 1.05;
+      box-shadow: 5px 5px rgba(48, 47, 47, 0.314);
+    }
+  }
+}
+
+footer{
+    margin-top: 50px;
+}
+
+.fonda__text{
+    text-align: center;
+}
+
+.clique__fonda{
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  li {
+    display: flex;
+    box-shadow: none !important;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  img {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 900px){
+    footer{
+        .footer__inner{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .footer__rs{
+            display: flex;
+            
+            
+
+            ul{
+                display: flex;
+                flex-direction: row;
+                
+                li{
+                    margin: 0px 15px;
+                }
+            }
+            
+        }
+    
+        .footer__chevron{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+    }
+}
+
+@media (max-width: 1100px ) {
+    .footer__chevron{
+        display: flex;
+        justify-content: center;
+        margin-left: 50px;
+    }
+        
+    
+}

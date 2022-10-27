@@ -12,6 +12,7 @@
     <link rel="icon" href="assets/images/soleil.png" type="image/png">
 
     <link rel="stylesheet" href="./assets/CSS/accueil.css">
+    
     <script src="./assets/JS/burger.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -20,42 +21,42 @@
 <body>
     <header>
         <!-- NavBar -->
-        <nav>
+        <nav class="nav__main">
             <!-- NavBar logo -->
-            <div class="nav__logo">
+            <div class="nav__main--logo">
                 <img src="./assets/images/logoSunpower.png" alt="logobyteam3" srcset="">
-            </div>
-            <!-- burger menu -->
-            <nav class="burger">
-                <div id="burger-menu">
-                    <span></span>
-                </div>
-                
-                <div id="menu">
-                    <ul>
-                        <li><a href="">Accueil</a></li>
-                        <li><a href="./pages/ombrièresolaire.html">Ombrières solaires</a></li>
-                        <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
-                        <li><a href="./pages/activites.html">Activités</a></li>
-                        <li><a href="./pages/partenaires.html">Partenaires</a></li>
-                        <li><a href="./pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
+            </div>                
+             
+            <!-- Burger menu -->
+            <nav class="nav__main--burger">
+            <div id="burger-menu">
+                <span></span>
+              </div>
+              
+              <div id="menu">
+                  <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./pages/ombrieresolaire.html">Ombrières solaires</a></li>
+                    <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
+                    <li><a href="./pages/activites.html">Activités</a></li>
+                    <li><a href="./pages/partenaires.html">Partenaires</a></li>
+                    <li><a href="./pages/contact.html">Contact</a></li>
+                  </ul>
+              </div>
             </nav>
 
-              
-          
+            <!-- Nav classique -->
+          <nav class="nav__main--menu">
+                <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./pages/ombrieresolaire.html">Ombrières solaires</a></li>
+                    <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
+                    <li><a href="./pages/activites.html">Activités</a></li>
+                    <li><a href="./pages/partenaires.html">Partenaires</a></li>
+                    <li><a href="./pages/contact.html">Contact</a></li>
 
-            <ul>
-                <li><a href="">Accueil</a></li>
-                <li><a href="./pages/ombrièresolaire.html">Ombrières solaires</a></li>
-                <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
-                <li><a href="./pages/activites.html">Activités</a></li>
-                <li><a href="./pages/partenaires.html">Partenaires</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
-
-            </ul>
+                </ul>
+            </nav>
         </nav>
         <!-- Fin NavBar -->
         <div class="header__banner">
@@ -66,9 +67,9 @@
 
     <main>
 
-        <q> Le Solaire à portée demain ("de main") pour tous </q>
+        <q> Le Solaire à portée Demain pour tous</q>
 
-        <p class="texte"> La société Sunpower conçoit et commercialise des panneaux solaires à haut
+        <p class="main__text"> La société Sunpower conçoit et commercialise des panneaux solaires à haut
             rendement (25%). Dans le cadre de ses activités Sunpower a développé des
             ombrières solaires pour la recharge des véhicules électriques. </p>
 
@@ -76,14 +77,14 @@
             <div class="card">
                 <div class="card__text">
                     <h2>Ombrières Solaires</h2>
-                    <p class="ombre">
+                    <p>
                         Le développement des ombrières solaires pour la recharge des
                         véhicules électriques constitue le pilier de notre développement.</p>
                 </div>
                 <div class="card__img" id="card1">
 
                     <div class="card__img__overlay">
-                        <a href="./pages/ombrièresolaire.html"><img src="./assets/images/Chevron Right.png"
+                        <a href="./pages/ombrieresolaire.html"><img src="./assets/images/Chevron Right.png"
                                 alt="Lien permettant d'aller vers la page Ombrières solaires"></a>
                     </div>
                 </div>
@@ -156,7 +157,7 @@ collectivités et particuliers </li>
                         <h5>Menu de navigation</h5>
                     </li>
                     <li><a href="./index.html">Accueil</a></li>
-                    <li><a href="./pages/ombrièresolaire.html">Ombrières solaires</a></li>
+                    <li><a href="./pages/ombrieresolaire.html">Ombrières solaires</a></li>
                     <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
                     <li><a href="./pages/activites.html">Activités</a></li>
                     <li><a href="./pages/partenaires.html">Partenaires</a></li>
@@ -171,7 +172,7 @@ collectivités et particuliers </li>
                         <h5>Plan du site</h5>
                     </li>
                     <li><a href="./index.html">Accueil</a></li>
-                    <li><a href="./pages/ombrièresolaire.html">Ombrières solaires</a></li>
+                    <li><a href="./pages/ombrieresolaire.html">Ombrières solaires</a></li>
                     <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
                     <li><a href="#">Actualités</a></li>
                     <li><a href="./pages/activites.html">Activités</a></li>

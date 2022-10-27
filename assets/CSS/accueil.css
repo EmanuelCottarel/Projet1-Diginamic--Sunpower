@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* Import du Style.css, Contient les éléments communs à toutes les pages: la nav et le footer  */
 @import url("./style.css");
+nav li:nth-child(1) {
+  background-color: #94DC1F;
+}
+
 .header__banner {
   width: 100%;
   height: 600px;
@@ -17,6 +21,7 @@
   color: white;
   font-size: 150px;
   font-style: italic;
+  text-shadow: 3px 5px 5px black;
 }
 
 main {
@@ -33,17 +38,10 @@ main q {
   font-size: xx-large;
   font-weight: 600;
 }
-main .texte {
-  display: flex;
-  justify-content: center;
+main__text {
   padding-top: 50px;
   font-size: large;
   text-align: center;
-}
-main .ombre {
-  display: flex;
-  justify-content: start;
-  padding-top: 10px;
 }
 main .cards {
   width: 100%;
@@ -57,6 +55,10 @@ main .card {
   justify-content: space-between;
   width: 90%;
   margin-bottom: 50px;
+}
+main .card:hover {
+  scale: 1.02;
+  box-shadow: 5px 5px 1px rgba(149, 149, 149, 0.3137254902);
 }
 main .card__text {
   width: 50%;

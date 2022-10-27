@@ -1,0 +1,163 @@
+/* Import du Style.css, Contient les éléments communs à toutes les pages: la nav et le footer et les variables  */
+@import url("./style.css");
+
+//Variables
+$primaryColor: #94DC1F; //vert clair
+$secondaryColor: #31CB00; //Vert foncé
+$thirdColor: #FFDF36; //Jaune
+$fourthColor: #000000; //Noir
+$fifthColor: #fff; //Blanc
+
+//Surligne la page active dans la navbar
+nav li:nth-child(2){
+    background-color: $primaryColor;
+}
+
+
+main{
+    width: 70%;
+    margin: 0 70px;
+    margin-bottom: 70px;
+    margin:auto;
+    
+    
+
+
+    h1{
+        width: 100%;
+        text-align: center;
+        // display: flex;
+        // justify-content:center;
+        margin-top: 70px;
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 70px;
+    }
+
+    h2{ text-align: left;
+        margin-top:70px;
+        margin-bottom: 70px;
+        
+    }
+    
+    .tag{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    height: 40px;
+    width: 280px;
+    background-image: linear-gradient(to right top, #06d5f7, #b4ee0e);
+    border-style: none;
+    border-radius: 8px;
+    margin-top:100px;
+    align-items: center;
+    }
+
+    a{
+        font-size:18px;
+        padding: 8px;
+        width: 100%;
+        // margin-left: 225px;
+        color: $fifthColor;
+    }
+
+    a:link{
+        text-decoration: none;
+    }
+
+    
+
+
+.ombriere{
+    display: flex;
+    flex-flow: row wrap;
+    width: auto;
+    justify-content: space-between;
+    margin: auto;
+    margin-top:70px;
+    
+    
+        img{
+            width: 40%;
+        }
+
+        p{
+            width:50%;
+            text-align: start;
+            
+        }
+}
+}
+
+#map{
+    width: 100%;
+    height: 400px;
+    background: #d6d6d6;
+}
+
+footer{
+    margin-top: 100px;
+}
+
+
+@media (max-width: 1920px){
+    .tdc{
+        width: 100% !important;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 1300px){
+
+    img{
+        width: 100% !important;
+    }
+
+.ombriere{
+    
+
+
+    p{
+        width: 100% !important;
+    }
+}
+
+}
+
+// .mapouter{
+//     display: flex;
+//     flex-flow: row wrap;
+//     justify-content: center;
+//     position:relative;
+//     text-align:center;
+//     height:800px;
+//     width:100%;
+// }
+
+// .gmap_canvas {
+//     display: flex;
+//     flex-flow: column wrap;
+//     justify-content: center;
+//         overflow:hidden;
+//         background:none!important;
+//         width: 100%;
+        
+//         }
+
+//     iframe{
+//         display: flex;
+//         width: 100%;
+//         justify-content:center;
+//         height:800px;
+//     }
+// }
+

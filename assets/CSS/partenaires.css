@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* Import du Style.css, Contient les éléments communs à toutes les pages: la nav et le footer et les variables  */
 @import url("./style.css");
+nav li:nth-child(5) {
+  background-color: #94DC1F;
+}
+
 main {
   width: 80%;
   margin: auto;
@@ -39,4 +43,30 @@ main .article__footer--socials {
 main .article__footer--socials img {
   width: 40px;
   height: 40px;
+}
+
+@media (max-width: 1198px) {
+  .article__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .article--img {
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    text-align: start;
+  }
+}
+@media (max-width: 830px) {
+  .article__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .article--img {
+    display: flex;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=partenaires.css.map */

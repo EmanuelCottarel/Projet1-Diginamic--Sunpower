@@ -11,7 +11,8 @@
     <link rel="icon" href="../assets/images/soleil.png" type="image/png">
 
     <link rel="stylesheet" href="../assets/CSS/activites.css">
-    <script src="./assets/JS/burger.js" defer></script>
+    <script src="../assets/JS/burger.js" defer></script>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
@@ -20,39 +21,42 @@
 
     <header>
         <!-- NavBar -->
-        <nav>
-            <div class="nav__logo">
+        <nav class="nav__main">
+            <!-- NavBar logo -->
+            <div class="nav__main--logo">
                 <img src="../assets/images/logoSunpower.png" alt="logobyteam3" srcset="">
-            </div>
+            </div>                
+             
+            <!-- Burger menu -->
+            <nav class="nav__main--burger">
+            <div id="burger-menu">
+                <span></span>
+              </div>
+              
+              <div id="menu">
+                  <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="./ombrieresolaire.html">Ombrières solaires</a></li>
+                    <li><a href="./quisommenous.html">Qui sommes nous?</a></li>
+                    <li><a href="./activites.html">Activités</a></li>
+                    <li><a href="./partenaires.html">Partenaires</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                  </ul>
+              </div>
+            </nav>
 
-            <!-- burger menu -->
-            <nav class="burger">
-                <div id="burger-menu">
-                    <span></span>
-                  </div>
-                  
-                  <div id="menu">
-                      <ul>
-                        <li><a href="">Accueil</a></li>
-                        <li><a href="./pages/ombrièresolaire.html">Ombrières solaires</a></li>
-                        <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
-                        <li><a href="./pages/activites.html">Activités</a></li>
-                        <li><a href="./pages/partenaires.html">Partenaires</a></li>
-                        <li><a href="./pages/contact.html">Contact</a></li>
-                      </ul>
-                  </div>
-    
-                </nav>
+            <!-- Nav classique -->
+          <nav class="nav__main--menu">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="./ombrieresolaire.html">Ombrières solaires</a></li>
+                    <li><a href="./quisommenous.html">Qui sommes nous?</a></li>
+                    <li><a href="./activites.html">Activités</a></li>
+                    <li><a href="./partenaires.html">Partenaires</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
 
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../pages/ombrièresolaire.html">Ombrières solaires</a></li>
-                <li><a href="../pages/quisommenous.html">Qui sommes nous?</a></li>
-                <li><a href="../pages/activites.html">Activités</a></li>
-                <li><a href="../pages/partenaires.html">Partenaires</a></li>
-                <li><a href="../pages/contact.html">Contact</a></li>
-
-            </ul>
+                </ul>
+            </nav>
         </nav>
         <!-- Fin NavBar -->
 
@@ -80,9 +84,9 @@
                             Nos principaux travaux concernent :
 
                         <ul class="liste__ul">
-                            <li>L'électronique de puissance</li>
-                            <li>Le développement des BMS (Battery Mangement System)</li>
-                            <li>L'électronique embarquée de manière générale</li>
+                            <li class="territoire">L'électronique de puissance</li>
+                            <li class="territoire">Le développement des BMS (Battery Mangement System)</li>
+                            <li class="territoire">L'électronique embarquée de manière générale</li>
                         </ul>
                         </p>
                     </div>
@@ -92,7 +96,7 @@
 
 
                     <div class="article__text">
-                        <h2>Recherche et développement</h2>
+                        <h2>Stratégie de développement</h2>
                         <p>Maître Corbeau, sur un arbre perché,
                             Tenait en son bec un fromage.
                             Maître Renard, par l'odeur alléché,
@@ -150,10 +154,10 @@
                             <p>Nous accompagnons les collectivités qui souhaitent implanter nos ombrières
                                 sur le territoire :</p>
                             <ul>
-                                <li>Étude de faisabilité</li>
-                                <li>Mise en conformité avec le PLUI</li>
-                                <li>Appels d'offres</li>
-                                <li>Montage financier</li>
+                                <li class="territoire">Étude de faisabilité</li>
+                                <li class="territoire">Mise en conformité avec le PLUI</li>
+                                <li class="territoire">Appels d'offres</li>
+                                <li class="territoire">Montage financier</li>
                             </ul>
 
                             <p>Nous souhaitons aussi développer l’activité vers les syndics de propriétés et les
@@ -205,7 +209,7 @@
                             <h5>Menu de navigation</h5>
                         </li>
                         <li><a href="../index.html">Accueil</a></li>
-                        <li><a href="../pages/ombrièresolaire.html">Ombrières solaires</a></li>
+                        <li><a href="../pages/ombrieresolaire.html">Ombrières solaires</a></li>
                         <li><a href="../pages/quisommenous.html">Qui sommes nous?</a></li>
                         <li><a href="../pages/activites.html">Activités</a></li>
                         <li><a href="../pages/partenaires.html">Partenaires</a></li>
@@ -220,7 +224,7 @@
                             <h5>Plan du site</h5>
                         </li>
                         <li><a href="../index.html">Accueil</a></li>
-                        <li><a href="../pages/ombrièresolaire.html">Ombrières solaires</a></li>
+                        <li><a href="../pages/ombrieresolaire.html">Ombrières solaires</a></li>
                         <li><a href="../pages/quisommenous.html">Qui sommes nous?</a></li>
                         <li><a href="#">Actualités</a></li>
                         <li><a href="../pages/activites.html">Activités</a></li>
