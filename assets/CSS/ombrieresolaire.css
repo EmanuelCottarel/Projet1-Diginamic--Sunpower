@@ -46,48 +46,79 @@ main a {
 main a:link {
   text-decoration: none;
 }
-main .ombriere {
+
+.ombriere {
   display: flex;
-  flex-flow: row wrap;
-  width: auto;
-  justify-content: space-between;
-  margin: auto;
+  width: 100%;
   margin-top: 70px;
+  justify-content: space-between;
+  align-items: center;
 }
-main .ombriere img {
-  width: 40%;
-}
-main .ombriere p {
+.ombriere__img {
   width: 50%;
-  text-align: start;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  background-image: url("../images/ombriere.jpg");
+  background-position: center;
+}
+.ombriere__text {
+  width: 45%;
+}
+.ombriere__text p {
+  text-align: left;
 }
 
 #map {
-  width: 100%;
-  height: 400px;
-  background: #d6d6d6;
+  height: 600px;
+}
+
+.ajout_map {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ajout_map input {
+  width: 250px;
+}
+
+#map__submit {
+  width: 100px;
+  height: 30px;
+  background-image: linear-gradient(to right top, #06d5f7, #b4ee0e);
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 20px;
 }
 
 footer {
   margin-top: 100px;
 }
 
-@media (max-width: 1920px) {
-  .tdc {
-    width: 100% !important;
-  }
-  h1 {
-    text-align: center;
-  }
-  h2 {
-    text-align: center;
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  main {
+    width: 90%;
   }
 }
-@media (max-width: 1300px) {
-  img {
-    width: 100% !important;
+@media only screen and (max-width: 992px) {
+  main {
+    width: 80%;
   }
-  .ombriere p {
-    width: 100% !important;
+  .ombriere {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .ombriere__img {
+    width: 100%;
+  }
+  .ombriere__text {
+    width: 100%;
+  }
+  .ombriere__text p {
+    padding-top: 25px;
+    margin-left: 0;
   }
 }/*# sourceMappingURL=ombrieresolaire.css.map */

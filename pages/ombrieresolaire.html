@@ -6,6 +6,8 @@
     <title>Sunpower - Ombrières Solaire</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
     <meta name="authors" content="El Medhi SBAI, Emanuel COTTAREL, Loai SADOUK, Vina MARIE-LUCE">
     <meta name="description"
         content="Sunpower est une entreprise qui participe au développement des energies photovoltaiques">
@@ -15,6 +17,17 @@
     <script src="../assets/JS/burger.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    <!-- Travail additionnel -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+     crossorigin=""></script>
+     <script src="../assets/js/map.js" defer></script>
+
 </head>
 
 <body>
@@ -23,7 +36,7 @@
         <nav class="nav__main">
             <!-- NavBar logo -->
             <div class="nav__main--logo">
-                <img src="../assets/images/logoSunpower.png" alt="logobyteam3" srcset="">
+                <img src="../assets/images/logoSunpower.png" alt="logobyteam3">
             </div>                
              
             <!-- Burger menu -->
@@ -62,7 +75,7 @@
     </header>
     
     <main>
-        <h1>Ombrière solaire</h1>
+        <h1>Ombrières solaires</h1>
         <div class="tag">
         <a href="#Mtp">Nos Ombrières à Montpellier</a>
     </div>
@@ -70,42 +83,45 @@
 
         <section class="ombriere">
 
-            <img src="../assets/images/ombriere.jpg" alt="ombriere">
+            <div class="ombriere__img">    
+                <!-- <img src="../assets/images/ombriere.jpg" alt=""> -->
+            </div>
 
-            <p>Le projet a été retenu par l’agglomération de Montpellier avec le déploiement de 4 ombrières solaires. 
-                Le projet est financé par l’agglomération de Montpellier, le conseil départemental et le conseil régional.<br><br> 
-                Nous développons actuellement la commercialisation de ce projet en région Occitanie dans le cadre d’un partenariat. L’agglomération de Toulouse s’est 
-                déjà positionné pour l’installation d’ombrières sur son territoire.<br><br> 
-                Nous souhaitons activement communiquer sur ce partenariat et sur 
-                l’implantation d’ombrières à Montpellier afin d’augmenter notre visibilité et notre notoriété et faciliter la commercialisation auprès d’autres collectivités. </p>
-
+            <div class="ombriere__text">
+                <p>Le projet a été retenu par l’agglomération de Montpellier avec le déploiement de 4 ombrières solaires. 
+                    Le projet est financé par l’agglomération de Montpellier, le conseil départemental et le conseil régional.<br><br> 
+                    Nous développons actuellement la commercialisation de ce projet en région Occitanie dans le cadre d’un partenariat. L’agglomération de Toulouse s’est 
+                    déjà positionné pour l’installation d’ombrières sur son territoire.<br><br> 
+                    Nous souhaitons activement communiquer sur ce partenariat et sur 
+                    l’implantation d’ombrières à Montpellier afin d’augmenter notre visibilité et notre notoriété et faciliter la commercialisation auprès d’autres collectivités. </p>
+            </div>
         </section>
 
         
-
         <h2 id="Mtp">Nos Ombrières à Montpellier</h2>
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe class="tdc"                   
-                    width="1450" 
-                    height="800"
-                    id="gmap_canvas" 
-                    src="https://www.google.com/maps/d/u/0/embed?mid=10MwxKmcgmYeoUD7SamPmGOUffT8nnFc&ehbc=2E312F" 
-                    frameborder="0" 
-                    scrolling="no" 
-                    marginheight="0" 
-                    marginwidth="0"
-                    ></iframe>
-                    </a>
-                    <br>
-                            </div>
-                        </div>
+            
+        <section class="section__map">
+            <!-- Map leafletjs -->
+            <div id="map"></div>
+            
+            <form class="ajout_map">
+            <h3>Ajouter une ombrière sur la carte</h3>
+                <label for="latitude">Latitude GPS</label>
+                <input type="text" id="latitude" required>
+                <label for="longitude">Longitude GPS</label>
+                <input type="text" id="longitude" required>
+                <label for="client">Nom du client</label>
+                <input type="text" id="client" required>
+                <label for="nbrOmbrelle">Nombre d'ombrières</label>
+                <input type="number" id="nbrOmbrelle" required>
+                <label for="capInstal">Capacité de l'installation (Wh)</label>
+                <input type="number" id="capInstal" required>
 
-                        
+                <button id="map__submit">Envoyer</button>
+            </form>
+                    
 
-
-        </div>
-
+    </section>
     </main>
 
     <footer>
@@ -122,7 +138,7 @@
                         <a href="https://twitter.com/?lang=fr" target="_blank"><ion-icon size= "large" name="logo-twitter"></ion-icon></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/?hl=fr"target="_blank"><ion-icon size= "large" name="logo-instagram"></ion-icon></a>
+                        <a href="https://www.instagram.com/?hl=fr" target="_blank"><ion-icon size= "large" name="logo-instagram"></ion-icon></a>
                     </li>
                 </ul>
             </div>
@@ -176,7 +192,7 @@
                 <a href="#top"><ion-icon name="chevron-up-circle-outline" size="large"></ion-icon></a>
             </div>
         </div>
-        <p>&copy copyright 2022. Tous droits réservés. SUNPOWER.</p>
+        <p>&copy; copyright 2022. Tous droits réservés. SUNPOWER.</p>
     </footer>
 
 </body>

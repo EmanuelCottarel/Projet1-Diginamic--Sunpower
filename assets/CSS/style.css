@@ -252,7 +252,7 @@ footer .footer p {
 }
 @media (max-width: 576px) {
   .nav__logo {
-    width: 70%;
+    width: 100%;
   }
   .menu__liens {
     display: block;
@@ -273,6 +273,11 @@ footer .footer p {
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 1339px) {
+  .nav__logo {
+    width: 100%;
   }
 }
 @media (max-width: 900px) {

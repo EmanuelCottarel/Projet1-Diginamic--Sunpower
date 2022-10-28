@@ -364,7 +364,7 @@ footer {
 @media (max-width: 576px){
     
     .nav__logo{
-        width: 70%;
+        width: 100%;
     }
         
     .menu__liens{
@@ -396,10 +396,9 @@ footer {
 }
 
 @media (max-width: 1339px){
-
-
-
-
+    .nav__logo{
+        width: 100%;
+    }
 }
 
 @media (max-width: 900px){

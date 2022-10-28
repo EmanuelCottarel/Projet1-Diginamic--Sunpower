@@ -119,4 +119,47 @@ main .card__img__overlay :hover img {
     font-style: italic;
     font-size: 70px;
   }
+}
+@media (max-width: 900px) {
+  .card__img__overlay img {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media (max-width: 614px) {
+  .card__text li {
+    font-size: 15px;
+  }
+}
+@media (max-width: 583px) {
+  .card__text li {
+    font-size: 14px;
+  }
+  .card__text p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 552px) {
+  .card__text li {
+    font-size: 13px;
+  }
+  .card__text p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 413px) {
+  .card__text li {
+    font-size: 11.5px;
+  }
+  .card__text p {
+    font-size: 11.5px;
+  }
+}
+@media (max-width: 546px) {
+  .card__text li {
+    font-size: 12px;
+  }
+  .card__text p {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=accueil.css.map */

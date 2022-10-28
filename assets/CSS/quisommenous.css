@@ -15,7 +15,7 @@ main h1 {
   font-weight: 600;
 }
 main .pr {
-  width: 80%;
+  width: 100%;
   margin: auto;
   margin-top: 50px;
   display: flex;
@@ -26,8 +26,8 @@ main .pr {
 main .pr__presentation {
   display: flex;
   flex-flow: column wrap;
-  justify-content: flex-end;
-  width: 70%;
+  justify-content: center;
+  width: 50%;
 }
 main .pr__immeuble {
   display: flex;
@@ -36,7 +36,6 @@ main .pr__immeuble {
   margin-top: 30px;
   margin-bottom: 30px;
   max-width: 550px;
-  margin-left: 100px;
   margin-right: 0;
   float: center;
 }
@@ -63,7 +62,7 @@ main p {
 }
 main ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -80,6 +79,16 @@ main .pr ul :hover {
   box-shadow: 5px 5px rgba(48, 47, 47, 0.314);
 }
 
+.black__color {
+  background-color: black;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.black__color .integrate {
+  color: white;
+}
+
 footer {
   margin-top: 50px;
 }
@@ -92,7 +101,14 @@ footer {
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 901px) {
+  .nav__main--logo {
+    width: 100%;
+  }
+  .clique__fonda {
+    display: flex;
+    justify-content: center;
+  }
   h2 {
     display: flex;
     justify-content: center;
@@ -107,17 +123,25 @@ footer {
   }
   li {
     display: flex;
-    box-shadow: none !important;
+    box-shadow: none;
     justify-content: center;
     padding-top: 50px;
   }
   img {
-    width: 50%;
-    padding: 0;
-    margin: 0;
+    width: 30%;
   }
-}
-@media (max-width: 900px) {
+  .pr {
+    margin: 0 !important;
+  }
+  .pr__immeuble img {
+    width: 100%;
+  }
+  .pr__immeuble {
+    margin: 0 !important;
+  }
+  figcaption {
+    width: 100%;
+  }
   footer .footer__inner {
     width: 100%;
     display: flex;
@@ -148,5 +172,33 @@ footer {
     display: flex;
     justify-content: center;
     margin-left: 50px;
+  }
+}
+@media (max-width: 576px) {
+  img {
+    width: 55%;
+  }
+}
+@media (max-width: 1920px) {
+  .pr {
+    margin: 0 !important;
+  }
+  .pr__immeuble img {
+    width: 100% !important;
+  }
+  .pr__immeuble {
+    margin: 0 !important;
+  }
+  figcaption {
+    width: 100% !important;
+  }
+  .pr__presentation {
+    align-items: center;
+    width: 40%;
+  }
+}
+@media (max-width: 800px) {
+  .nav__main--logo {
+    width: 100% !important;
   }
 }/*# sourceMappingURL=quisommenous.css.map */
