@@ -19,8 +19,8 @@
  
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type = "text/javascript">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
     (function(){
     emailjs.init("DwZJ4WwVhTbkusxOt");
     })();
@@ -33,7 +33,7 @@
     <nav class="nav__main">
       <!-- NavBar logo -->
       <div class="nav__main--logo">
-          <img src="../assets/images/logoSunpower.png" alt="logobyteam3" srcset="">
+          <img src="../assets/images/logoSunpower.png" alt="Logo de Sunpower">
       </div>                
        
       <!-- Burger menu -->
@@ -68,7 +68,7 @@
       </nav>
   </nav>
     <!-- Fin NavBar -->
-
+</header>
     <!-- DEBUT MAIN -->
     <main>
       <!-- TITRE -->
@@ -103,40 +103,40 @@
           <h2 id="titreForm2">Donnez nous quelques informations sur vous</h2>
           <form>
             <div class="contact__form--entreprises-syndic">
-              <label for="Raison sociale">Raison sociale</label>
+              <label for="form1Raison">Raison sociale</label>
               <input type="text" placeholder="Société Doe" minlength="2" required id="form1Raison">
       
               <div class="contact__row">
                 <div class="contact__col">
                   <label for="nom">Nom</label>
-                  <input type="text" title="Votre nom"  placeholder="Doe" minlength="2" id="name"required>
+                  <input type="text" title="Votre nom" placeholder="Doe" minlength="2" id="nom" required>
       
                 </div>
                 <div class="contact__col">
                   <label for="prenom">Prénom</label>
-                  <input type="text" placeholder="John" minlength="2" required>
+                  <input type="text" placeholder="John" minlength="2" id="prenom" required>
                 </div>
               </div>
       
               <label for="adresse">Adresse</label>
-              <input type="text" placeholder="40 rue Louis Lépine" maxlength="5" required>
+              <input type="text" placeholder="40 rue Louis Lépine" maxlength="5" id="adresse" required>
               
               <div class="contact__row">
                 <div class="contact__col">
-                  <label for="code postal">Code postal</label>
-                  <input type="number" placeholder="34000" minlength="5" required>
+                  <label for="codePostal">Code postal</label>
+                  <input type="number" placeholder="34000" maxlength="5" id="codePostal" required>
                 </div>
                 <div class="contact__col">
                   <label for="ville">Ville</label>
-                  <input type="text" placeholder="Montpellier" minlength="1" required>
+                  <input type="text" id="ville" placeholder="Montpellier" minlength="1" required>
                 </div>
               </div>
-              <label for="mail">Mail</label>
-              <input type="mail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="johndoe@gmail.com" required>
+              <label for="email">Mail</label>
+              <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" placeholder="johndoe@gmail.com" required>
               <label for="tel">Téléphone</label>
-              <input type="tel" placeholder="0123456789" maxlength="10" required class="inputTEL">
-              <label for="file">Joindre un document (PDF)</label>
-              <input type="file" maxlength="10" accept="pdf" id="inputPDF">
+              <input type="tel" placeholder="0123456789" maxlength="10" required id="tel" class="inputTEL">
+              <label for="inputPDF">Joindre un document (PDF)</label>
+              <input type="file" accept="PDF" id="inputPDF">
             </div>
       
             <h2 id="titreForm3">Parlez nous de votre projet</h2>
@@ -154,17 +154,17 @@
             <div class="contact__form--particuliers">
               <div class="contact__row">
                   <div class="contact__col">
-                    <label for="nom">Nom</label>
+                    <label for="fromSurname">Nom</label>
                     <input type="text" id="fromSurname" placeholder="Doe" minlength="2" required>
                   </div>
                   <div class="contact__col">
-                    <label for="prenom">Prénom</label>
+                    <label for="fromName">Prénom</label>
                     <input type="text" id="fromName" placeholder="John" minlength="2" required>
                   </div>
               </div>
-              <label for="mail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">Mail</label>
-              <input type="mail" id="fromEmail" placeholder="johndoe@gmail.com" required>
-              <label for="tel">Téléphone</label>
+              <label for="fromEmail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">Mail</label>
+              <input type="email" id="fromEmail" placeholder="johndoe@gmail.com" required>
+              <label for="fromPhone">Téléphone</label>
               <input type="tel" id="fromPhone" placeholder="0984303034" maxlength="10" required class="inputTEL">
             </div>
       
@@ -202,7 +202,7 @@
                       <a href="https://twitter.com/?lang=fr" target="_blank"><ion-icon size= "large" name="logo-twitter"></ion-icon></a>
                   </li>
                   <li>
-                      <a href="https://www.instagram.com/?hl=fr"target="_blank"><ion-icon size= "large" name="logo-instagram"></ion-icon></a>
+                      <a href="https://www.instagram.com/?hl=fr" target="_blank"><ion-icon size= "large" name="logo-instagram"></ion-icon></a>
                   </li>
               </ul>
           </div>
@@ -258,7 +258,7 @@
               </a>
           </div>
       </div>
-      <p>&copy copyright 2022. Tous droits réservés. SUNPOWER.</p>
+      <p>&copy; copyright 2022. Tous droits réservés. SUNPOWER.</p>
   </footer>
   <!-- FIN FOOTER -->
 

@@ -5,6 +5,12 @@ nav li:nth-child(3) {
   background-color: #94dc1f;
 }
 
+main {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: auto;
+}
 main h1 {
   display: flex;
   flex-flow: column wrap;
@@ -16,7 +22,6 @@ main h1 {
 }
 main .pr {
   width: 100%;
-  margin: auto;
   margin-top: 50px;
   display: flex;
   flex-flow: column wrap;
@@ -27,7 +32,11 @@ main .pr__presentation {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  width: 50%;
+}
+main .pr__figure {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 main .pr__immeuble {
   display: flex;
@@ -35,14 +44,8 @@ main .pr__immeuble {
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 30px;
-  max-width: 550px;
   margin-right: 0;
-  float: center;
-}
-main .pr__immeuble img {
-  display: flex;
-  justify-content: center;
-  justify-self: center;
+  margin-left: 0;
 }
 main figcaption {
   background-color: #94dc1f;
@@ -105,41 +108,34 @@ footer {
   .nav__main--logo {
     width: 100%;
   }
-  .clique__fonda {
+  main .clique__fonda {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  main h2 {
     display: flex;
     justify-content: center;
   }
-  h2 {
-    display: flex;
-    justify-content: center;
-  }
-  p {
+  main p {
     text-align: center;
   }
-  ul {
+  main .pr {
+    margin: 0;
+  }
+  main .pr ul :hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: none;
   }
-  li {
+  main li {
     display: flex;
     box-shadow: none;
     justify-content: center;
     padding-top: 50px;
   }
-  img {
-    width: 30%;
-  }
-  .pr {
-    margin: 0 !important;
-  }
-  .pr__immeuble img {
-    width: 100%;
-  }
-  .pr__immeuble {
-    margin: 0 !important;
-  }
-  figcaption {
+  main figcaption {
     width: 100%;
   }
   footer .footer__inner {
@@ -175,30 +171,44 @@ footer {
   }
 }
 @media (max-width: 576px) {
-  img {
-    width: 55%;
+  main .pr__immeuble {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: none;
+  }
+  li {
+    display: flex;
+    box-shadow: none;
+    justify-content: center;
+    padding-top: 50px;
   }
 }
-@media (max-width: 1920px) {
+@media (max-width: 576px) and (max-width: 1920px) {
   .pr {
-    margin: 0 !important;
+    margin: 0;
   }
-  .pr__immeuble img {
-    width: 100% !important;
+  main .pr__figure {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 750px;
+    justify-content: center;
   }
-  .pr__immeuble {
-    margin: 0 !important;
+  main .pr__figure .pr__immeuble img {
+    max-width: 650px;
   }
-  figcaption {
-    width: 100% !important;
+  main figcaption {
+    width: 100%;
   }
-  .pr__presentation {
+  main .pr__presentation {
     align-items: center;
     width: 40%;
   }
-}
-@media (max-width: 800px) {
-  .nav__main--logo {
-    width: 100% !important;
+  main .nav__main--logo {
+    width: 100%;
   }
 }/*# sourceMappingURL=quisommenous.css.map */
