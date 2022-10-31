@@ -1,56 +1,35 @@
-// Carte des fondateurs 
-const Fonda1 = document.querySelector("#fonda1");
-const Fonda2 = document.querySelector("#fonda2");
-const Fonda3 = document.querySelector("#fonda3");
+const overlayFondateur1 = document.querySelector("#overlayFondateur1");
+const overlayFondateur2 = document.querySelector("#overlayFondateur2");
+const overlayFondateur3 = document.querySelector("#overlayFondateur3");
 
-// Texte des fondateurs
-const textFonda1 = document.querySelector("#textFonda1")
-const textFonda2 = document.querySelector("#textFonda2")
-const textFonda3 = document.querySelector("#textFonda3")
+overlayFondateur1.style.display="none";
+overlayFondateur2.style.display="none";
+overlayFondateur3.style.display="none";
 
-textFonda1.style.display = "none";
-textFonda2.style.display = "none";
-textFonda3.style.display = "none";
+const carteFondateur1= document.querySelector("#carteFondateur1");
+const carteFondateur2= document.querySelector("#carteFondateur2");
+const carteFondateur3= document.querySelector("#carteFondateur3");
 
-//function
-
-function disparait(textFondaX){
-    if(textFondaX.style.display === "block"){
-        textFondaX.style.display = "none"
-    }else{
-        textFondaX.style.display = "block";
-    }
+carteFondateur1.onmouseover= function(){
+    overlayFondateur1.style.display="block";
 }
 
-
- 
-
-fonda1.onclick = function(){
-    disparait(textFonda1);
-
-    textFonda2.style.display = "none";
-    textFonda3.style.display = "none";
-
+carteFondateur1.onmouseout= function(){
+    overlayFondateur1.style.display="none";
 }
 
-fonda2.onclick = function(){
-    disparait(textFonda2);
-
-    textFonda1.style.display = "none";
-    textFonda3.style.display = "none";
-    
+carteFondateur2.onmouseover= function(){
+    overlayFondateur2.style.display="block";
 }
 
-fonda3.onclick = function(){
-    disparait(textFonda3);
-    
-    textFonda1.style.display = "none";
-    textFonda2.style.display = "none";
-    
+carteFondateur2.onmouseout= function(){
+    overlayFondateur2.style.display="none";
 }
 
+carteFondateur3.onmouseover= function(){
+    overlayFondateur3.style.display="block";
+}
 
-
-
-
-
+carteFondateur3.onmouseout= function(){
+    overlayFondateur3.style.display="none";
+}

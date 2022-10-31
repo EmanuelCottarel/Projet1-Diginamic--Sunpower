@@ -9,9 +9,11 @@ main {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  width: auto;
+  width: 80%;
+  margin: auto;
 }
-main h1 {
+
+h1 {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -20,195 +22,113 @@ main h1 {
   font-size: 40px;
   font-weight: 600;
 }
-main .pr {
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.presentation__societe {
   width: 100%;
   margin-top: 50px;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
-main .pr__presentation {
+
+.presentation {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: row;
+}
+.presentation__figure {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
-main .pr__figure {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-main .pr__immeuble {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-right: 0;
-  margin-left: 0;
-}
-main figcaption {
+.presentation__figure--caption {
   background-color: #94dc1f;
   color: #fff;
   padding: 5px;
   text-align: center;
   font-style: italic;
 }
-main h2 {
-  font-size: xx-large;
-}
-main p {
+.presentation__text {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: x-large;
-  text-align: center;
+  text-align: left;
+  font-size: 20px;
 }
-main ul {
+
+.fondateurs__cartes {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  list-style: none;
-  margin-top: 50px;
   margin-bottom: 50px;
-  padding-left: 0;
-  width: 80%;
-}
-main li {
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 5px 5px rgba(144, 144, 144, 0.3137254902);
-}
-main .pr ul :hover {
-  scale: 1.05;
-  box-shadow: 5px 5px rgba(48, 47, 47, 0.314);
 }
 
-.black__color {
-  background-color: black;
+.fondateur__carte {
+  width: 219px;
+  height: 350px;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+}
+.fondateur__carte:nth-child(1) {
+  background-image: url("../images/Cartefondateur.png");
+}
+.fondateur__carte:nth-child(2) {
+  background-image: url("../images/Cartefondateur2.png");
+}
+.fondateur__carte:nth-child(3) {
+  background-image: url("../images/Cartefondateur3.png");
+}
+.fondateur__overlay {
   width: 100%;
-  margin: 0;
-  padding: 0;
-}
-.black__color .integrate {
-  color: white;
-}
-
-footer {
-  margin-top: 50px;
+  height: 100%;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.4392156863);
+  color: #fff;
 }
 
-.fonda__text {
-  text-align: center;
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  main {
+    width: 90%;
+  }
 }
-
-.clique__fonda {
-  cursor: pointer;
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  main {
+    width: 95%;
+  }
 }
-
-@media (max-width: 901px) {
-  .nav__main--logo {
-    width: 100%;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  main {
+    width: 95%;
   }
-  main .clique__fonda {
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-  }
-  main h2 {
-    display: flex;
-    justify-content: center;
-  }
-  main p {
-    text-align: center;
-  }
-  main .pr {
-    margin: 0;
-  }
-  main .pr ul :hover {
+  .presentation {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    box-shadow: none;
-  }
-  main li {
-    display: flex;
-    box-shadow: none;
-    justify-content: center;
-    padding-top: 50px;
-  }
-  main figcaption {
-    width: 100%;
-  }
-  footer .footer__inner {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
   }
-  footer .footer__rs {
-    display: flex;
-  }
-  footer .footer__rs ul {
-    display: flex;
-    flex-direction: row;
-  }
-  footer .footer__rs ul li {
-    margin: 0px 15px;
-  }
-  footer .footer__chevron {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .presentation__text {
+    width: 80%;
   }
 }
-@media (max-width: 1100px) {
-  .footer__chevron {
-    display: flex;
-    justify-content: center;
-    margin-left: 50px;
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  main {
+    width: 95%;
   }
-}
-@media (max-width: 576px) {
-  main .pr__immeuble {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  ul {
+  .presentation {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    box-shadow: none;
-  }
-  li {
-    display: flex;
-    box-shadow: none;
-    justify-content: center;
-    padding-top: 50px;
-  }
-}
-@media (max-width: 576px) and (max-width: 1920px) {
-  .pr {
-    margin: 0;
-  }
-  main .pr__figure {
-    display: flex;
-    flex-flow: row wrap;
-    max-width: 750px;
-    justify-content: center;
-  }
-  main .pr__figure .pr__immeuble img {
-    max-width: 650px;
-  }
-  main figcaption {
-    width: 100%;
-  }
-  main .pr__presentation {
     align-items: center;
-    width: 40%;
   }
-  main .nav__main--logo {
-    width: 100%;
+  .presentation__text {
+    width: 70%;
+  }
+  .fondateurs__cartes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=quisommenous.css.map */
