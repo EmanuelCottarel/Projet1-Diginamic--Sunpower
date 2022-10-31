@@ -10,18 +10,28 @@ $fifthColor: #fff; //Blanc
 
 //Surligne la page active dans la navbar
 nav li:nth-child(4){
-    background-color: $primaryColor;
+  background-color: $primaryColor;
 }
 
 main {
   width: 70%;
   margin: auto;
   font-size: 16px;
-
+}
+  
   h1 {
     margin-top: 70px;
     font-size: 40px;
+    text-align: center;
+  }
+  
+  h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     text-align: left;
+    margin: 0;
+    line-height: 16px;
   }
 
 section{
@@ -32,184 +42,105 @@ section{
     display: flex;
     justify-content: space-around;
     margin-top: 130px;
-    align-items: center;
+    
   }
 
-  article div{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-  }
-  
-  .article__img {
-    height: 450px;
-    width: 325px;
-    overflow: hidden;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    box-shadow: 5px 5px 0px #90909050;
-  }
- 
-  .article__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 70%;
-    padding-top: 50px;
-  }
 
-  h2 {
-    display: flex;
-    flex-direction: row wrap;
-    justify-content: flex-start;
-    margin: 0;
-    line-height: 16px;
-  }
+  .article{
 
-  ul {
-    list-style: none;
+    &__img {
+      max-height: 420px;
+      width: 25%;
+      overflow: hidden;
+      display: flex;     
+      align-items: center;
+      justify-content: center;
+      box-shadow: 5px 5px 0px #90909050;
 
-    li:before {
-      content: "- ";
+
+      
     }
-  }
-}
 
-
-@media (max-width: 576px) {
-
-    article{
+    &__text {
       display: flex;
       flex-direction: column;
-      padding-top: 10px;
-    }
+      align-items: left;
+      width: 70%;
+      padding-top: 50px;
+
+      ul {
+        list-style: none;
     
-    .article__img {
-      width: 70px;
-      height: 30px;
+        li:before {
+          content: "- ";
+        }
+      }
     }
+  }
+ 
 
-  .article__text{
-    font-size: 40px;
-    text-align: left;
-  }
-  
-  h2{
-    padding-top: 10px;
-    font-size: 21px;
+
+ 
+
+
+
+
+@media only screen and (min-width: 1200px) and (max-width:1400px) {
+
+  main {
+    width: 90%;
   }
 
-  .territoire{
-    text-align: center;
-    margin-right: 50px;
-  }
 }
 
-@media (max-width: 726px) {
-  .box{
+@media only screen and (min-width: 992px) and (max-width:1199px) {
+
+  main {
+    width: 90%;
+  }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width:991px) {
+
+  main {
+    width: 90%;
+  }
+
+  article{
     display: flex;
     flex-direction: column;
-  }
+    align-items: center;
 
-  .article__img{
-    padding: 0;
-  }
-  
-  img{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 450px;
-    
-  }
-
-
-.article__text{
-  font-size: 16px;
-  text-align: left;
-}
-
-h2{
-  padding-top: 10px;
-  padding-bottom: 50px;
-  font-size: 21px;
-}
-
-.territoire{
-  text-align: center;
-  margin-right: 50px;
-}
-
-}
-
-@media (max-width: 993px){
-
-
-  .article__img{
-    padding: 0;
-  }
-
-  img{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 450px;
-    
-  }
-
-  .article__text{
-    font-size: 16px;
-    text-align: center;
-  }
-
-h2{
-  padding-top: 10px;
-  padding-bottom: 50px;
-  font-size: 21px;
-}
-
-  .territoire{
-  text-align: center;
-  margin-right: 50px;
-}
-
-}
-
-@media (max-width: 993px){
-
-  .article__img{
-    padding: 0;
-  }
-
-  img{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 450px;
-    
-  }
-
-  .article__text{
-    font-size: 16px;
-    text-align: center;
-
-    p{
+    &:nth-child(2){
       display: flex;
-      text-align: start;
+      flex-direction: column-reverse;
+      align-items: center;
     }
   }
 
-  h2{
-    padding-top: 10px;
-    padding-bottom: 50px;
-    font-size: 21px;
+  .article{
+
+    &__img{      
+      width: 80%;
+
+
+      img{
+        width: 100%;
+      }
+
+        
+    }
+
+    &__text{
+      width: 100%;
+    }
   }
 
-  .territoire{
-    text-align: center;
-    margin-right: 50px;
-  }
+
+
 }
+
+
+
+

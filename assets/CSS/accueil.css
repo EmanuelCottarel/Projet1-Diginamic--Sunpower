@@ -7,7 +7,7 @@ nav li:nth-child(1) {
 
 .header__banner {
   width: 100%;
-  height: 600px;
+  max-height: 600px;
   background-image: url("../images/banner.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -17,7 +17,6 @@ nav li:nth-child(1) {
   align-items: center;
 }
 .header__banner h1 {
-  margin: 0;
   color: white;
   font-size: 150px;
   font-style: italic;
@@ -31,46 +30,48 @@ main {
   flex-direction: column;
   align-items: center;
 }
-main q {
-  display: flex;
-  justify-content: center;
+
+.main__text {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+.main__text q {
   padding-top: 50px;
-  font-size: xx-large;
+  font-size: 30px;
   font-weight: 600;
 }
-main__text {
-  padding-top: 50px;
-  font-size: large;
-  text-align: center;
-}
-main .cards {
+
+.cards {
   width: 100%;
   margin-bottom: 50px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .card {
+
+.card {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
   margin-bottom: 50px;
 }
-main .card:hover {
+.card:hover {
   scale: 1.02;
   box-shadow: 5px 5px 1px rgba(149, 149, 149, 0.3137254902);
 }
-main .card__text {
+.card__text {
   width: 50%;
   height: 250px;
 }
-main .card #card1 {
+.card #card1 {
   background-image: url("../images/ombriere.jpg");
 }
-main .card #card2 {
+.card #card2 {
   background-image: url("../images/ingenieur.jpg");
 }
-main .card__img {
+.card__img {
   width: 50%;
   height: 250px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
@@ -81,85 +82,58 @@ main .card__img {
   display: flex;
   justify-content: end;
 }
-main .card__img__overlay {
+.card__img__overlay {
   width: 20%;
   height: 250px;
   background-color: rgba(0, 0, 0, 0.3764705882);
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-main .card__img__overlay :hover img {
+.card__img__overlay a {
+  display: block;
+  width: 80%;
+}
+.card__img__overlay img {
+  width: 100%;
+}
+.card__img__overlay:hover img {
   scale: 1.1;
 }
 
-@media (max-width: 576px) {
-  .header__banner {
-    height: 250px;
-  }
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .header__banner h1 {
-    color: white;
-    font-style: italic;
-    font-size: 70px;
+    font-size: 125px;
+  }
+  main {
+    width: 90%;
   }
 }
-@media (max-width: 1339px) {
-  q {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 70px;
-    font-weight: 600;
-  }
-  .header__banner {
-    height: 250px;
-  }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header__banner h1 {
-    color: white;
-    font-style: italic;
-    font-size: 70px;
+    font-size: 100px;
+  }
+  main {
+    width: 95%;
   }
 }
-@media (max-width: 900px) {
-  .card__img__overlay img {
-    height: 50px;
-    width: 50px;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header__banner h1 {
+    font-size: 75px;
+  }
+  main {
+    width: 95%;
   }
 }
-@media (max-width: 614px) {
-  .card__text li {
-    font-size: 15px;
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .header__banner h1 {
+    font-size: 65px;
   }
-}
-@media (max-width: 583px) {
-  .card__text li {
-    font-size: 14px;
+  main {
+    width: 95%;
   }
-  .card__text p {
-    font-size: 14px;
-  }
-}
-@media (max-width: 552px) {
-  .card__text li {
-    font-size: 13px;
-  }
-  .card__text p {
-    font-size: 13px;
-  }
-}
-@media (max-width: 413px) {
-  .card__text li {
-    font-size: 11.5px;
-  }
-  .card__text p {
-    font-size: 11.5px;
-  }
-}
-@media (max-width: 546px) {
-  .card__text li {
-    font-size: 12px;
-  }
-  .card__text p {
-    font-size: 12px;
+  .card__text ul {
+    padding-left: 0;
   }
 }/*# sourceMappingURL=accueil.css.map */
