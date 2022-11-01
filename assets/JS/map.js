@@ -1,3 +1,5 @@
+// Map Leaflet
+
 let map = L.map('map').setView([43.610769, 3.876716], 12);
 
 
@@ -6,6 +8,9 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
+
+//Marqueurs
 
 //PRADEO
 const marker1 = L.marker([43.567044, 3.943067]).addTo(map);

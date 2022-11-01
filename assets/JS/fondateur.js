@@ -1,3 +1,7 @@
+//JS page fondateur - Overlays
+
+//Récupération des éléments dans le DOM
+
 const overlayFondateur1 = document.querySelector("#overlayFondateur1");
 const overlayFondateur2 = document.querySelector("#overlayFondateur2");
 const overlayFondateur3 = document.querySelector("#overlayFondateur3");
@@ -10,6 +14,8 @@ const carteFondateur1= document.querySelector("#carteFondateur1");
 const carteFondateur2= document.querySelector("#carteFondateur2");
 const carteFondateur3= document.querySelector("#carteFondateur3");
 
+
+// Afficher et masquer les overlays
 carteFondateur1.onmouseover= function(){
     overlayFondateur1.style.display="block";
 }

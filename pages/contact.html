@@ -15,14 +15,13 @@
   <link rel="stylesheet" href="../assets/CSS/style.css">
   <script src="../assets/JS/burger.js" defer></script>
   <script src="../assets/JS/form.js" defer></script>
- 
- 
+
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
-    (function(){
-    emailjs.init("DwZJ4WwVhTbkusxOt");
+    (function () {
+      emailjs.init("DwZJ4WwVhTbkusxOt");
     })();
   </script>
 </head>
@@ -33,232 +32,363 @@
     <nav class="nav__main">
       <!-- NavBar logo -->
       <div class="nav__main--logo">
-          <img src="../assets/images/logoSunpower.png" alt="Logo de Sunpower">
-      </div>                
-       
+        <img src="../assets/images/logoSunpower.png" alt="Logo de Sunpower">
+      </div>
+
       <!-- Burger menu -->
       <nav class="nav__main--burger">
-      <div id="burger-menu">
+        <div id="burger-menu">
           <span></span>
         </div>
-        
+
         <div id="menu">
-            <ul>
-              <li><a href="../index.html">Accueil</a></li>
-              <li><a href="./ombrieresolaire.html">Ombrières solaires</a></li>
-              <li><a href="./quisommenous.html">Qui sommes nous?</a></li>
-              <li><a href="./activites.html">Activités</a></li>
-              <li><a href="./partenaires.html">Partenaires</a></li>
-              <li><a href="./contact.html">Contact</a></li>
-            </ul>
+          <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="./ombrieresolaire.html">Ombrières solaires</a></li>
+            <li><a href="./quisommenous.html">Qui sommes nous?</a></li>
+            <li><a href="./activites.html">Activités</a></li>
+            <li><a href="./partenaires.html">Partenaires</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
         </div>
       </nav>
 
       <!-- Nav classique -->
-    <nav class="nav__main--menu">
-          <ul>
-              <li><a href="../index.html">Accueil</a></li>
-              <li><a href="./ombrieresolaire.html">Ombrières solaires</a></li>
-              <li><a href="./quisommenous.html">Qui sommes nous?</a></li>
-              <li><a href="./activites.html">Activités</a></li>
-              <li><a href="./partenaires.html">Partenaires</a></li>
-              <li><a href="./contact.html">Contact</a></li>
+      <nav class="nav__main--menu">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="./ombrieresolaire.html">Ombrières solaires</a></li>
+          <li><a href="./quisommenous.html">Qui sommes nous?</a></li>
+          <li><a href="./activites.html">Activités</a></li>
+          <li><a href="./partenaires.html">Partenaires</a></li>
+          <li><a href="./contact.html">Contact</a></li>
 
-          </ul>
+        </ul>
       </nav>
-  </nav>
+    </nav>
     <!-- Fin NavBar -->
-</header>
-    <!-- DEBUT MAIN -->
-    <main>
-      <!-- TITRE -->
-      <h1>Contact</h1>
-      
-      <div class="contact">
-        <!-- NAVIGATION FORMULAIRE -->
-        <div class="contact__navigation">
-          <div class="contact__navigation--liste">
-            <div class="contact__navigation--etape" id="number1">1 </div>
-            <div class="contact__navigation--line"></div>
-            <div class="contact__navigation--etape" id="number2">2</div>
-            <div class="contact__navigation--line"></div>
-            <div class="contact__navigation--etape" id="number3">3</div>
-      
-          </div>
-      
-          <h2 id="titreForm1">Qui êtes-vous ?</h2>
-      
-          <div class="contact__choix">
-            <ul class="contact__choix--liste">
-              <li class="contact__choix--cible" id="choixEntreprise">Entreprises ou collectivités<ion-icon name="chevron-forward-outline"></ion-icon>
-              </li>
-              <li class="contact__choix--cible" id="choixSyndicats">Syndicats de copropriété<ion-icon name="chevron-forward-outline"></ion-icon>
-              </li>
-              <li class="contact__choix--cible" id="choixParticuliers">Je veux juste poser une question<ion-icon name="chevron-forward-outline">
-                </ion-icon>
-              </li>
-            </ul>
-          </div>
-      
-          <h2 id="titreForm2">Donnez nous quelques informations sur vous</h2>
-          <form>
-            <div class="contact__form--entreprises-syndic">
-              <label for="form1Raison">Raison sociale</label>
-              <input type="text" placeholder="Société Doe" minlength="2" required id="form1Raison">
-      
-              <div class="contact__row">
-                <div class="contact__col">
-                  <label for="nom">Nom</label>
-                  <input type="text" title="Votre nom" placeholder="Doe" minlength="2" id="nom" required>
-      
-                </div>
-                <div class="contact__col">
-                  <label for="prenom">Prénom</label>
-                  <input type="text" placeholder="John" minlength="2" id="prenom" required>
-                </div>
-              </div>
-      
-              <label for="adresse">Adresse</label>
-              <input type="text" placeholder="40 rue Louis Lépine" maxlength="5" id="adresse" required>
-              
-              <div class="contact__row">
-                <div class="contact__col">
-                  <label for="codePostal">Code postal</label>
-                  <input type="number" placeholder="34000" maxlength="5" id="codePostal" required>
-                </div>
-                <div class="contact__col">
-                  <label for="ville">Ville</label>
-                  <input type="text" id="ville" placeholder="Montpellier" minlength="1" required>
-                </div>
-              </div>
-              <label for="email">Mail</label>
-              <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" placeholder="johndoe@gmail.com" required>
-              <label for="tel">Téléphone</label>
-              <input type="tel" placeholder="0123456789" maxlength="10" required id="tel" class="inputTEL">
-              <label for="inputPDF">Joindre un document (PDF)</label>
-              <input type="file" accept="PDF" id="inputPDF">
-            </div>
-      
-            <h2 id="titreForm3">Parlez nous de votre projet</h2>
-      
-            <div class="contact__form--projet">
-              <label for="texte">Description du projet (500 caractères maximum)</label>
-              <textarea rows="10" cols="50" maxlength="500" required></textarea>
-              <input id="message" type="submit" class="contact__submit">
-              <span id="msg_success">Message envoyé avec succès !</span>
-            </div>
-            <input type="submit" value="Envoyer" class="contact__submit submitFormEntreprise">
-          </form>
-      
-          <form>
-            <div class="contact__form--particuliers">
-              <div class="contact__row">
-                  <div class="contact__col">
-                    <label for="fromSurname">Nom</label>
-                    <input type="text" id="fromSurname" placeholder="Doe" minlength="2" required>
-                  </div>
-                  <div class="contact__col">
-                    <label for="fromName">Prénom</label>
-                    <input type="text" id="fromName" placeholder="John" minlength="2" required>
-                  </div>
-              </div>
-              <label for="fromEmail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">Mail</label>
-              <input type="email" id="fromEmail" placeholder="johndoe@gmail.com" required>
-              <label for="fromPhone">Téléphone</label>
-              <input type="tel" id="fromPhone" placeholder="0984303034" maxlength="10" required class="inputTEL">
-            </div>
-      
-            <div class="contact__form--question">
-              <label for="texte">Posez votre question (500 caractères maximum)</label>
-              <textarea rows="10" cols="50" maxlength="500" required></textarea>
-      
-            </div>
-      
-            <input id="message" type="submit" class="contact__submit submitFormParticulier">
-          </form>
-      
-          <div class="buttons">
-            <button id="button__back">Précédent</button>
-            <button id="button__next">Suivant</button>
-      
-          </div>
+  </header>
+  <!-- DEBUT MAIN -->
+  <main>
+    <!-- TITRE -->
+    <h1>Contact</h1>
+
+    <div class="choixFormulaire">
+      <input type="radio" name="choixFormulaire" class="choix" id="choixFormulaire1" checked>
+      <label for="choixFormulaire1">Je veux des informations sur mon projet</label>
+      <input type="radio" name="choixFormulaire" class="choix" id="choixFormulaire2">
+      <label for="choixFormulaire2">Je veux poser une question</label>
+    </div>
+
+    <!-- Formulaire 1: Informations et projets Entreprise, syndicats, copropriété -->
+
+
+    <div class="container" id="containerProjet">
+      <!-- Etapes du formulaire -->
+      <div class="numbers">
+        <div class="number" id="number1">
+          <p>1</p>
         </div>
-    </main>
+        <div class="line"></div>
+        <div class="number" id="number2">
+          <p>2</p>
+        </div>
+        <div class="line"></div>
+        <div class="number" id="number3">
+          <p>3</p>
+        </div>
 
-    
-    <!-- FIN MAIN -->
-
-    <footer>
-      <div class="footer__inner">
-          <div class="footer__rs">
-              <ul>
-                  <li>
-                      <a href="https://fr-fr.facebook.com/" target="_blank"><ion-icon size= "large" name="logo-facebook"></ion-icon></a>
-                  </li>
-                  <li>
-                      <a href="https://www.linkedin.com/" target="_blank"><ion-icon size= "large" name="logo-linkedin"></ion-icon></a>
-                  </li>
-                  <li>
-                      <a href="https://twitter.com/?lang=fr" target="_blank"><ion-icon size= "large" name="logo-twitter"></ion-icon></a>
-                  </li>
-                  <li>
-                      <a href="https://www.instagram.com/?hl=fr" target="_blank"><ion-icon size= "large" name="logo-instagram"></ion-icon></a>
-                  </li>
-              </ul>
-          </div>
-
-          <div class="footer__info">
-
-              <ul>
-                  <li>
-                      <h5 id="info">Informations utiles</h5>
-                  </li>
-                  <li>Adresse :</li>
-                  <li> 2 rue de l'innovation<br> 38000 Grenoble</li>
-                  <li>Télephone : 0984303034</li>
-              </ul>
-          </div>
-
-          <div class="footer__menu">
-
-              <ul>
-                  <li>
-                      <h5>Menu de navigation</h5>
-                  </li>
-                  <li><a href="../index.html">Accueil</a></li>
-                  <li><a href="../pages/ombrieresolaire.html">Ombrières solaires</a></li>
-                  <li><a href="../pages/quisommenous.html">Qui sommes nous?</a></li>
-                  <li><a href="../pages/activites.html">Activités</a></li>
-                  <li><a href="../pages/partenaires.html">Partenaires</a></li>
-                  <li><a href="../pages/contact.html">Contact</a></li>
-              </ul>
-          </div>
-
-          <div class="footer__sitemap">
-
-              <ul>
-                  <li>
-                      <h5>Plan du site</h5>
-                  </li>
-                  <li><a href="../index.html">Accueil</a></li>
-                  <li><a href="../pages/ombrieresolaire.html">Ombrières solaires</a></li>
-                  <li><a href="../pages/quisommenous.html">Qui sommes nous?</a></li>
-                  <li><a href="#">Actualités</a></li>
-                  <li><a href="../pages/activites.html">Activités</a></li>
-                  <li><a href="../pages/partenaires.html">Partenaires</a></li>
-                  <li><a href="../pages/contact.html">Contact</a></li>
-                  <li><a href="#info">Informations utiles</a></li>
-                  <li><a href="#">Mentions légales</a></li>
-              </ul>
-
-          </div>
-          <div class="footer__chevron">
-              <a href="#top">
-                  <ion-icon name="chevron-up-circle-outline" size="large"></ion-icon>
-              </a>
-          </div>
       </div>
-      <p>&copy; copyright 2022. Tous droits réservés. SUNPOWER.</p>
+
+      <!-- Formulaire pour les entreprises, syndicats, copropriétés -->
+      <form class="form" id="formProject" novalidate>
+
+        <!-- Etape 1 du formulaire -->
+        <div class="formulaire" id="form1">
+          <h2>Vous êtes?</h2>
+          <input type="radio" name="choix" class="choix" id="choix1" checked>
+          <label for="choix1">Une entreprise ou une collectivité</label>
+          <input type="radio" name="choix" class="choix" id="choix2">
+          <label for="choix2">Un syndicat ou une copropriété</label>
+
+        </div>
+
+        <!-- Etape 2 du formulaire -->
+        <div class="formulaire" id="form2">
+
+          <h2>Donnez nous quelques informations sur vous</h2>
+
+          <div class="formulaire__element">
+            <label class="formulaire__element" for="raisonSociale">Raison sociale</label>
+            <input type="text" id="raisonSociale" placeholder="Sas Doe"
+              title="Indiquez la raison sociale de l'organisme que vous representez" required>
+          </div>
+
+          <div class="formulaire__row">
+            <div class="formulaire__col">
+              <label for="firstName">Prénom</label>
+              <input type="text" id="firstName" class="half__width" placeholder="John" title="Indiquez votre prénom"
+                required>
+            </div>
+            <div class="formulaire__col">
+              <label for="lastName">Nom</label>
+              <input type="text" id="lastName" class="half__width" placeholder="Doe" title="Indiquez votre nom"
+                required>
+
+            </div>
+          </div>
+
+          <div class="formulaire__element">
+            <label for="adresse">Adresse</label>
+            <input type="text" id="adresse" placeholder="40 rue Louis Lépine"
+              title="Indiquez votre adresse au format '123 nom de la rue'" required>
+          </div>
+
+          <div class="formulaire__row">
+            <div class="formulaire__col">
+              <label for="codePostal">Code Postal</label>
+              <input type="number" id="codePostal" class="half__width" placeholder="34000"
+                title="Indiquez votre code postal en chiffres" required>
+            </div>
+            <div class="formulaire__col">
+              <label for="ville">Ville</label>
+              <input type="text" id="ville" class="half__width" placeholder="Montpellier"
+                title="Indiquez le nom de la ville" required>
+
+            </div>
+          </div>
+
+          <div class="formulaire__element">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="johndoe@gmail.com"
+              title="Indiquez votre adresse email au format: 'exemple@exemple.com'" required>
+          </div>
+
+          <div class="formulaire__element">
+            <label for="telephone">Telephone</label>
+            <input type="tel" id="telephone" class="half__width" placeholder="0123456789"
+              title="Indiquez votre numéro de téléphone au format:'0123456789'" required>
+          </div>
+
+        </div>
+
+        <!-- Etape 3 du formulaire -->
+        <div class="formulaire" id="form3">
+
+          <h2>Decrivez nous votre projet</h2>
+
+          <label for="descriptionProjet">Quel est votre projet?</label>
+          <textarea id="descriptionProjet" name="Projet" rows="5" cols="33">
+      Je souhaiterais...
+      </textarea>
+
+          <input type="submit" class="button button__submit" id="buttonSubmit">
+
+        </div>
+
+      </form>
+       <!-- Boutons controle du formulaire -->
+      <div class="buttons">
+        <button id="buttonReturn" class="button">Retour</button>
+        <button id="buttonNext" class="button button__next">Suivant</button>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Formulaire 2: Poser une question -->
+
+    <div class="container" id="containerQuestion">
+      <!-- Etapes du formulaire -->
+      <div class="numbers" id="twoNumbers">
+        <div class="number" id="number1Question">
+          <p>1</p>
+        </div>
+        <div class="line"></div>
+        <div class="number" id="number2Question">
+          <p>2</p>
+        </div>
+
+
+
+      </div>
+
+      <!-- Etape 1 du formulaire -->
+      <form class="form" id="formQuestion" novalidate>
+
+
+        <div class="formulaire" id="formQuestion1">
+          <h2>Donnez nous quelques informations sur vous</h2>
+
+          <div class="formulaire__row">
+            <div class="formulaire__col">
+              <label for="firstNameQuestion">Prénom</label>
+              <input type="text" id="firstNameQuestion" class="half__width" placeholder="John"
+                title="Indiquez votre prénom" required>
+            </div>
+            <div class="formulaire__col">
+              <label for="lastNameQuestion">Nom</label>
+              <input type="text" id="lastNameQuestion" class="half__width" placeholder="Doe" title="Indiquez votre nom"
+                required>
+
+            </div>
+          </div>
+
+
+          <div class="formulaire__element">
+            <label for="emailQuestion">Email</label>
+            <input type="email" id="emailQuestion" placeholder="johndoe@gmail.com"
+              title="Indiquez votre adresse email au format: 'exemple@exemple.com'" required>
+          </div>
+
+          <div class="formulaire__element">
+            <label for="telephoneQuestion">Telephone</label>
+            <input type="tel" id="telephoneQuestion" class="half__width" placeholder="0123456789"
+              title="Indiquez votre numéro de téléphone au format:'0123456789'" required>
+          </div>
+
+        </div>
+
+        <!-- Etape 2 du formulaire -->
+        <div class="formulaire" id="formQuestion2">
+
+          <h2>Posez votre question</h2>
+
+          <label for="votreQuestion">Votre question</label>
+          <textarea id="votreQuestion" name="Projet" rows="5" cols="33">
+      Bonjour, voici ma question...
+      </textarea>
+
+          <input type="submit" class="button button__submit" id="buttonSubmitFormQuestion">
+
+        </div>
+
+      </form>
+      <!-- Boutons controle du formulaire -->
+      <div class="buttons">
+        <button id="buttonReturnQuestion" class="button">Retour</button>
+        <button id="buttonNextQuestion" class="button button__next">Suivant</button>
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- FIN MAIN -->
+
+  <!-- DEBUT FOOTER -->
+  <footer>
+
+    <!-- DEBUT CONTENU PRINCIPAL FOOTER -->
+    <div class="footer__inner">
+
+      <!-- DEBUT RESEAUX SOCIAUX -->
+      <div class="footer__rs">
+
+        <!-- DEBUT LISTE RESEAUX SOCIAUX -->
+        <ul>
+          <li>
+            <a href="https://fr-fr.facebook.com/" target="_blank">
+              <ion-icon size="large" name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <ion-icon size="large" name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/?lang=fr" target="_blank">
+              <ion-icon size="large" name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/?hl=fr" target="_blank">
+              <ion-icon size="large" name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+        <!-- FIN LISTE RESAUX SOCIAUX -->
+      </div>
+
+      <!-- FIN RESEAUX SOCIAUX -->
+
+
+      <!-- DEBUT INFORMATIONS UTILES -->
+      <div class="footer__info">
+
+        <!-- DEBUT LISTE INFORMATIONS UTILES -->
+        <ul>
+          <li>
+            <h5 id="info">Informations utiles</h5>
+          </li>
+          <li>Adresse :</li>
+          <li> 2 rue de l'innovation<br> 38000 Grenoble</li>
+          <li>Télephone : 0984303034</li>
+        </ul>
+        <!-- FIN LISTE INFORMATIONS UTILES -->
+
+      </div>
+      <!-- FIN INFORMATIONS UTILES -->
+
+
+      <!-- DEBUT MENU DE NAVIGATION -->
+      <div class="footer__menu">
+        <!-- DEBUT LISTE MENU DE NAVIGATION -->
+        <ul>
+          <li>
+            <h5>Menu de navigation</h5>
+          </li>
+          <li><a href="./index.html">Accueil</a></li>
+          <li><a href="./pages/ombrieresolaire.html">Ombrières solaires</a></li>
+          <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
+          <li><a href="./pages/activites.html">Activités</a></li>
+          <li><a href="./pages/partenaires.html">Partenaires</a></li>
+          <li><a href="./pages/contact.html">Contact</a></li>
+        </ul>
+        <!-- FIN LISTE MENU DE NAVIGATION -->
+      </div>
+      <!-- FIN  MENU DE NAVIGATION -->
+
+
+      <!-- DEBUT PLAN DU SITE -->
+      <div class="footer__sitemap">
+        <!-- DEBUT LISTE PLAN DU SITE -->
+        <ul>
+          <li>
+            <h5>Plan du site</h5>
+          </li>
+          <li><a href="./index.html">Accueil</a></li>
+          <li><a href="./pages/ombrieresolaire.html">Ombrières solaires</a></li>
+          <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
+          <li><a href="#">Actualités</a></li>
+          <li><a href="./pages/activites.html">Activités</a></li>
+          <li><a href="./pages/partenaires.html">Partenaires</a></li>
+          <li><a href="./pages/contact.html">Contact</a></li>
+          <li><a href="#info">Informations utiles</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+        <!-- FIN LISTE PLAN DU SITE -->
+
+      </div>
+      <!-- FIN PLAN DU SITE -->
+
+
+      <!-- DEBUT FLECHE -->
+      <div class="footer__chevron">
+        <a href="#top">
+          <ion-icon name="chevron-up-circle-outline" size="large"></ion-icon>
+        </a>
+      </div>
+      <!-- FIN FLECHE -->
+
+    </div>
+    <!-- FIN CONTENU PRINCIPAL FOOTER -->
+
+    <!-- COPYRIGHT -->
+    <p>&copy; copyright 2022. Tous droits réservés. SUNPOWER.</p>
   </footer>
   <!-- FIN FOOTER -->
 

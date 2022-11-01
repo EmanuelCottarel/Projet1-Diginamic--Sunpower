@@ -1,301 +1,260 @@
-//SELECTION DES ETAPES
-const etape1 = document.querySelector("#number1");
-const etape2 = document.querySelector("#number2");
-const etape3 = document.querySelector("#number3");
-
-// SELECTION DES FORMULAIRES DANS LE DOM
-const form1 = document.querySelector(".contact__choix");
-const form2 = document.querySelector(".contact__form--entreprises-syndic");
-const form3 = document.querySelector(".contact__form--projet");
-const form4 = document.querySelector(".contact__form--particuliers");
-const form5 = document.querySelector(".contact__form--question");
-
-//SELECTION DES TITRES DES FORMULAIRES DANS LE DOM
-const titreForm1 = document.querySelector("#titreForm1");
-const titreForm2 = document.querySelector("#titreForm2");
-const titreForm3 = document.querySelector("#titreForm3");
-
-// SELECTION DES BOUTONS DANS LE DOM
-const buttonBack = document.querySelector("#button__back");
-const buttonBack2 = document.querySelector("#button__back2");
-const buttonNext = document.querySelector("#button__next");
-
-//BOUTON SUBMIT
-////SUBMIT FORM QUESTION
-const buttonSubmit = document.querySelector("#message");
-const submitFormParticulier=document.querySelector(".submitFormParticulier");
-////SUBMIT FORM ENTREPRISES ET COLLECTIVITES
-const submitFormEntreprise=document.querySelector(".submitFormEntreprise");
+// Formulaire de la page contact.html
 
 
-// SELECTION DES CHOIX SUR LE FORMULAIRE 1
-const choixEntreprise = document.querySelector("#choixEntreprise");
-const choixSyndicats = document.querySelector("#choixSyndicats");
-const choixParticuliers = document.querySelector("#choixParticuliers");
+//Choix du formulaire
+const formProjet = document.querySelector("#containerProjet");
+const formQuestion = document.querySelector("#containerQuestion");
 
-// SELECTION DU MESSAGE DANS LE DOM
-const msgSuccess = document.querySelector("#msg_success");
+const choixFormProjet = document.querySelector("#choixFormulaire1");
+const choixFormQuestion = document.querySelector("#choixFormulaire2");
 
-// LES FORMULAIRES, LES BOUTONS ET LE MESSAGE SONT MASQUES PAR DEFAUT
-///Si le JS n'est pas executé, les éléments sont affichés par défaut et le formulaire peut toujour etre rempli
-
-form2.style.display = "none";
-form3.style.display = "none";
-form4.style.display = "none";
-form5.style.display = "none";
-
-titreForm2.style.display = "none";
-titreForm3.style.display = "none";
-
-buttonBack.style.display = "none";
-buttonNext.style.display = "none";
-buttonSubmit.style.display = "none";
-submitFormParticulier.style.display = "none";
-submitFormEntreprise.style.display = "none";
+formQuestion.style.display = "none";
 
 
-msgSuccess.style.display = "none";
+// Fonction permettant d'afficher un des formulaire et d'afficher le second selon le choix de l'utilisateur
+function QuelFormulaire() {
+  if (choixFormProjet.checked) {
+    formProjet.style.display = "flex";
+    formQuestion.style.display = "none";
+  } else if (choixFormQuestion.checked) {
+    formQuestion.style.display = "flex";
+    formProjet.style.display = "none";
+  }
+}
+choixFormProjet.onclick = function () {
+  QuelFormulaire();
+};
+choixFormQuestion.onclick = function () {
+  QuelFormulaire();
+};
+
+//Formulaire 1: projets et informations Entreprises, syndicats, copropriétés
 
 
-// FONCTIONS
+// Récupération des éléments du formulaire 1 dans le DOM
+const buttonNext = document.querySelector("#buttonNext");
+const buttonReturn = document.querySelector("#buttonReturn");
+const form = document.querySelector("#formProject");
 
-//FONCTION QUI PERMET D'AFFICHER LES BOUTONS SUIVANTS ET PRECEDENTS
+const number1 = document.querySelector("#number1");
+const number2 = document.querySelector("#number2");
+const number3 = document.querySelector("#number3");
 
-function afficherBouton() {
-  buttonBack.style.display = "block";
-  buttonNext.style.display = "block";
+
+//La variable Swipe correspond a l'étape du formulaire à laquelle on se trouve
+// etape 1 = 0
+// etape 2 = 1
+// etape 3 = 2
+let swipe = 0;
+
+
+buttonReturn.style.display = "none";
+
+//Bouton suivant - événement onclick
+buttonNext.onclick = function () {
+  swipe++;
+  goLeft();
+  displayButton();
+  changeNumber();
+};
+
+//Bouton Précedent - événement onclick
+buttonReturn.onclick = function () {
+  swipe--;
+  goRight();
+  displayButton();
+  changeNumber();
+};
+
+
+//Fonction permettant de changer le numéro d'étape à laquelle on se trouve
+function changeNumber() {
+  if (swipe === 0) {
+    number1.style.backgroundColor = "#94dc1f";
+    number1.style.color = "#fff";
+
+    number2.style.backgroundColor = "#fff";
+    number2.style.color = "#94dc1f";
+
+    number3.style.backgroundColor = "#fff";
+    number3.style.color = "#94dc1f";
+  } else if (swipe === 1) {
+    number2.style.backgroundColor = "#94dc1f";
+    number2.style.color = "#fff";
+
+    number1.style.backgroundColor = "#fff";
+    number1.style.color = "#94dc1f";
+
+    number3.style.backgroundColor = "#fff";
+    number3.style.color = "#94dc1f";
+  } else if (swipe === 2) {
+    number3.style.backgroundColor = "#94dc1f";
+    number3.style.color = "#fff";
+
+    number2.style.backgroundColor = "#fff";
+    number2.style.color = "#94dc1f";
+
+    number1.style.backgroundColor = "#fff";
+    number1.style.color = "#94dc1f";
+  }
 }
 
 
-//Fonction permettant de changer les pages du formulaire. 
-function changePage() {
-    if (whichForm === 1) {                            
-      form1.style.display = "flex";
-      form2.style.display = "none";
-      form3.style.display = "none";
-      form4.style.display = "none";
-      form5.style.display = "none";
-  
-      buttonBack.style.display = "none";
-      buttonNext.style.display = "none";
-      submitFormEntreprise.style.display = "none";
-      submitFormParticulier.style.display = "none";
-      
-      titreForm1.innerHTML="Qui êtes-vous?";
-      
-    } else if (whichForm === 2) {
-      form1.style.display = "none";
-      form2.style.display = "flex";
-      form3.style.display = "none";
-      form4.style.display = "none";
-      form5.style.display = "none";
-  
-      afficherBouton();
-      submitFormParticulier.style.display = "none";
-      submitFormEntreprise.style.display = "none";
-      
-      titreForm1.innerHTML="Donnez nous quelques informations sur vous";
-      
-      
-    } else if (whichForm === 3) {
-      form1.style.display = "none";
-      form2.style.display = "none";
-      form3.style.display = "flex";
-      form4.style.display = "none";
-      form5.style.display = "none";
-  
-      buttonBack.style.display = "block";
-      buttonNext.style.display = "none";
-      submitFormEntreprise.style.display = "block";
-      submitFormParticulier.style.display = "none";
-      
-      
-      
-      titreForm1.innerHTML="Parlez nous de votre projet";
-      
-    } else if (whichForm === 4) {
-      form1.style.display = "none";
-      form2.style.display = "none";
-      form3.style.display = "none";
-      form4.style.display = "flex";
-      form5.style.display = "none";
-  
-      afficherBouton();
-      buttonBack.onclick = function () {
-        whichForm = 1;
-        changePage();
-        changeCouleurEtape()
-      };
-      
-       titreForm1.innerHTML="Donnez nous quelques informations sur vous";
-      submitFormParticulier.style.display = "none";
-      
-    } else if (whichForm === 5) {
-      form1.style.display = "none";
-      form2.style.display = "none";
-      form3.style.display = "none";
-      form4.style.display = "none";
-      form5.style.display = "flex";
-  
-      afficherBouton();
-      buttonBack.onclick = function () {
-        whichForm = 4;
-        changePage();
-        changeCouleurEtape()
-      };
-      
-      
-      buttonNext.style.display = "none";
-      submitFormParticulier.style.display = "block";
-      
-      titreForm1.innerHTML="Quelle est votre question?";
-     
-    }
-    
-    console.log(whichForm)
+//Fonction qui affiche les boutons Suivant et Retour selon l'étape du formulaire
+function displayButton() {
+  if (swipe === 0) {
+    buttonReturn.style.display = "none";
+    buttonNext.style.display = "block";
+  } else if (swipe === 1) {
+    buttonNext.style.display = "block";
+    buttonReturn.style.display = "block";
+  } else if (swipe === 2) {
+    buttonNext.style.display = "none";
+    buttonReturn.style.display = "block";
   }
-  
-  //Fonction permettant de changer la couleur des numéros
-  function changeCouleurEtape(){
-  if(whichForm===1){
-      etape1.style.backgroundColor = "#94dc1f";
-      etape1.style.borderColor = "#94dc1f";
-    
-      etape2.style.backgroundColor = "#fff";
-      etape2.style.borderColor = "#000";
-    
-      etape3.style.backgroundColor = "#fff";
-      etape3.style.borderColor = "#000";
-        
-  }else if(whichForm===2 || whichForm===4){
-      etape1.style.backgroundColor = "#fff";
-      etape1.style.borderColor = "#000";
-    
-      etape2.style.backgroundColor = "#94dc1f";
-      etape2.style.borderColor = "#94dc1f";
-    
-      etape3.style.backgroundColor = "#fff";
-      etape3.style.borderColor = "#000";
-      
-     
-  }else if(whichForm===3 || whichForm===5){
-      etape1.style.backgroundColor = "#fff";
-      etape1.style.borderColor = "#000";
-    
-      etape2.style.backgroundColor = "#fff";
-      etape2.style.borderColor = "#000";
-    
-      etape3.style.backgroundColor = "#94dc1f";
-      etape3.style.borderColor = "#94dc1f";
-      
-     
+}
+
+
+//Fonction permettant de décaler le formulaire sur la gauche
+function goLeft() {
+  if (swipe === 1) {
+    form.style.transform = "translate(0)";
+  } else if (swipe === 2) {
+    form.style.transform = "translate(-190%)";
   }
+}
+
+//Fonction permettant de décaler le formulaire sur la droite
+function goRight() {
+  if (swipe === 1) {
+    form.style.transform = "translate(0)";
+  } else if (swipe === 0) {
+    form.style.transform = "translate(190%)";
   }
+}
 
 
-// WhichForm permet de définir à quelle étape du formulaire on se trouve. Elle est incrémentée quand on apsse à l'étape suivante 
-let whichForm = 1;
+//Formulaire 2: Questions
+//Récupération des éléments du formulaire 2 dans le DOM
+const formulaireQuestion = document.querySelector("#formQuestion");
 
-changeCouleurEtape()
+const buttonNextQuestion = document.querySelector("#buttonNextQuestion");
+const buttonReturnQuestion = document.querySelector("#buttonReturnQuestion");
+
+const number1Question = document.querySelector("#number1Question");
+const number2Question = document.querySelector("#number2Question");
 
 
-//EVENEMENTS ONCLICK
+//La variable SwipeQuestion permet de savoir à quelle étape on se trouve sur le formulaire 2
+let swipeQuestion = 0;
 
-//Au clic sur le bouton "Suivant", whichForm est incrémenté de 1, l'étape suivante du formulaire s'affiche
-buttonNext.onclick = function () {
-  whichForm++;
-  console.log(whichForm);
-  changePage();
-  changeCouleurEtape();
+buttonReturnQuestion.style.display = "none";
+
+//Bouton suivant - événement onclick
+buttonNextQuestion.onclick = function () {
+  swipeQuestion++;
+  goRightQuestion();
+  displayButtonQuestion();
+  changeNumberQuestion();
 };
 
-//Au clic sur le bouton "Entreprise", whichForm est incrémenté de 1, l'étape suivante du formulaire s'affiche
-choixEntreprise.onclick = function () {
-  whichForm++;
-  console.log(whichForm);
-  changePage();
-  changeCouleurEtape();
-};
-
-//Au clic sur le bouton "Syndicats", whichForm est incrémenté de 1, l'étape suivante du formulaire s'affiche
-choixSyndicats.onclick = function () {
-  whichForm++;
-  console.log(whichForm);
-  changePage();
-  changeCouleurEtape();
-};
-
-//Au clic sur le bouton "Je veux juste poser une question", whichForm prend la valeur 4, ce qui correspond à la 2e page du formulaire Questions
-choixParticuliers.onclick = function () {
-  whichForm = 4;
-  console.log(whichForm);
-  changePage();
-  changeCouleurEtape();
-};
-
-//Au clic sur le bouton "Suivant", whichForm est décrémenté de 1, l'étape précédente du formulaire s'affiche
-buttonBack.onclick = function () {
-  whichForm--;
-  console.log(whichForm);
-  changePage();
-  changeCouleurEtape();
+//Bouton retour - événement onclick
+buttonReturnQuestion.onclick = function () {
+  swipeQuestion--;
+  goLeftQuestion();
+  displayButtonQuestion();
+  changeNumberQuestion();
 };
 
 
+//Fonction permettant de changer le numéro d'étape à laquelle on se trouve
+function changeNumberQuestion() {
+  if (swipeQuestion === 0) {
+    number1Question.style.backgroundColor = "#94dc1f";
+    number1Question.style.color = "#fff";
+    number2Question.style.backgroundColor = "#fff";
+    number2Question.style.color = "#94dc1f";
+     
+  } else if (swipeQuestion === 1) {
+    number2Question.style.backgroundColor = "#94dc1f";
+    number2Question.style.color = "#fff";
+
+    number1Question.style.backgroundColor = "#fff";
+    number1Question.style.color = "#94dc1f";
+  }
+}
+
+//Fonction qui affiche les boutons Suivant et Retour selon l'étape du formulaire
+function displayButtonQuestion() {
+  if (swipeQuestion === 0) {
+    buttonReturnQuestion.style.display = "none";
+    buttonNextQuestion.style.display = "block";
+  } else if (swipeQuestion === 1) {
+    buttonNextQuestion.style.display = "block";
+    buttonReturnQuestion.style.display = "block";
+  }
+}
+
+//Fonction permettant de décaler le formulaire sur la droite
+function goRightQuestion() {
+  if (swipeQuestion === 1) {
+    formulaireQuestion.style.transform = "translate(-94%)";
+  }
+}
+
+//Fonction permettant de décaler le formulaire sur la gauche
+function goLeftQuestion() {
+  if (swipeQuestion === 0) {
+    formulaireQuestion.style.transform = "translate(94%)";
+  }
+}
 
 
+// Validation des champs
+pageInit(form);
+pageInit(formulaireQuestion);
+//add submit event listener to form
+function pageInit(formulaire) {
+  formulaire.addEventListener("submit", validateForm);
+}
 
+function validateForm(e) {
+  //Empeche l'envoie normal du formulaire
+  e.preventDefault();
+  //Retire les messages de validation
+  document.querySelectorAll(".msg").forEach((msg) => {
+    msg.parentNode.removeChild(msg);
+  });
+  //Initialisation de la variable valid
+  let valid = true;
+  //Récuperation dans le DOM des champs de formulaire à vérifier
+  let fields = document.querySelectorAll(
+    "input[required], select[required], input[maxlength], input[pattern]"
+  );
+  //Boucle à travers les champs à vérifier
+  fields.forEach((field) => {
+    if (field.checkValidity()) {
+      //Si le champs est valide, on ajoute une class "valid" au champ concerné dans le HTML
+      field.className = "valid";
+      
+    } else {
+      //Valid prend la valeur false
+      valid = false;
+      //Si le champs est invalide, on ajoute une class "invalid" au champ concerné dans le HTML
+      field.className = "invalid";
+      
+      //La variable message prend la veleur de l'attribut "title" du champ concerné
+      let message = field.title ? field.title : field.validationMessage;
+      //Ajoute un Span contenant le message d'erreur dans le DOM
+      field.parentNode.insertAdjacentHTML(
+        "beforeend",
+        `<span class="msg error-msg">${message}</span>`
+      );
+    } //Fin if else checkValidity()
+  }); //Fin forEach()
+  //On envoie le formulaire si la variable valid=true
 
-
-
-
-// Bouton envoyer qui envoi un mail à l'utilisateur
-
-// const onSubmit = (data, r) =>{
-//     alert('Merci pour votre message, il sera traité au plus vite');
-//     const templateId = 'template_55hpl2b';
-//     const serviceId = 'service_kh5s0pb';
-//     sendFeedback(serviceId, templateId, {
-//         from_surname: data.from_surname,
-//         from_name: data.from_name,
-//         contact_email: data.contact_email,
-//         from_phone: data.from_phone,
-//         message: data.message,
-//         reply_to: r.target.reset(),
-//     });
-// };
-
-// const sendFeedback = (serviceId, templateId, variables) =>{
-//     emailjs.send(serviceId, templateId, variables,"DwZJ4WwVhTbkusxOt").then((res)=> {
-//         console.log('success')
-//     })
-//     .catch((err)=> console.error('Il y a une erreur'));
-// }
-
-
-// function sendMail(params){
-//     let tempParams = {
-//         from_surname: document.getElementById("fromSurname").value,
-//         from_name: document.getElementById("fromname").value,
-//         contact_email: document.getElementById("fromEmail").value,
-//         from_phone: document.getElementById("fromphone").value,
-//         message:document.getElementById("message").value
-//     }
-
-//     emailjs.send('service_kh5s0pb', 'template_55hpl2b', tempParams).then(function(res){
-//         console.log("success: ", res.status);
-
-//         if (res.status === 500){
-//             msgSuccess = document.getElementById('msg_success');
-//             msgSuccess.setAttribute("style", "display : block"); 
-//             setTimeout(() =>{
-//                 msgSuccess.setAttribute("style", "display : none");
-//             }, 5000);
-//         }
-//     })
-// }
-
-
-
-
-
+  if (valid) {
+    e.target.submit();
+  }
+}

@@ -3,7 +3,7 @@
 
 //Variables
 $primaryColor: #94DC1F; //vert clair
-$secondaryColor: #31CB00; //Vert foncé
+$secondaryColor: #94DC1F; //Vert foncé
 $thirdColor: #FFDF36; //Jaune
 $fourthColor: #000000; //Noir
 $fifthColor: #fff; //Blanc
@@ -12,231 +12,281 @@ $fifthColor: #fff; //Blanc
 
 //Surligne la page active dans la navbar
 nav li:nth-child(6) {
-    background-color: $primaryColor;
+  background-color: $primaryColor;
 }
 
 
-//Variables
-$primaryColor: #94dc1f; //vert clair
-$secondaryColor: #31cb00; //Vert foncé
-$thirdColor: #ffdf36; //Jaune
-$fourthColor: #000000; //Noir
-$fifthColor: #fff;
-
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 
-main{
-  display:flex;
+main {
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.contact {
+
+// Choix du formulaire à afficher
+.choixFormulaire {
+  width: 80%;
+  margin: auto;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+  margin: 50px 0;
+
+}
+
+// Contient le formulaire et les boutons
+.container {
   width: 450px;
-  height: 1000px;
+  height: auto;
+  padding: 5px;
   margin: auto;
   margin-bottom: 50px;
-  
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
-  input{
-    height: 50px;
-    padding: 20px;
-    margin-bottom: 25px;
-    border: 1px solid black;
-    
-    &:valid{
-      border: 1px solid $primaryColor;
-      
-      
-    }
-    &:invalid{
-      border: 1px solid red;
-      
-      }
-  
-    &:hover{
-      background-color: #94dc1f25;
-      
-         }  
-    
-  }
+  box-sizing: content-box;
+
+
+}
+
+// Etapes du formulaire
+.numbers {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $secondaryColor;
+  border: 1px solid $secondaryColor;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  font-size: 23px;
+
+}
+
+#number1 {
+  color: #fff;
+  background-color: $secondaryColor;
+}
+
+#number1Question {
+  color: #fff;
+  background-color: $secondaryColor;
+}
+
+.line {
+  border-bottom: 1px solid $secondaryColor;
+  width: 128px;
+  margin: 0;
+
+}
+
+// Formulaire
+
+form {
+  width: 450px;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  transform: translate(190%);
+  transition: transform 330ms ease-in-out;
 
   h2 {
     text-align: center;
+    display: block;
+    font-size: 20px;
   }
+}
 
-  a {
-    text-decoration: none;
-  }
 
-  li {
-    list-style: none;
-  }
+.formulaire {
+  width: 450px;
+  margin: 0px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
 
-  p {
-    font-size: 32px;
-    color: $fourthColor;
-    font-weight: 10px;
-  }
 
-  .buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 5px;
-    
-    
-  }
-  
-  button {
-    width: 100px;
-    height: 50px;
-    padding: 5px;
-    background-color: #fff;
-    border:1px solid #909090;
-    border-radius: 5px;
-    cursor:pointer;
-  
-    
-    &:hover{
-       scale:1.05;
-    }
-       
-  }
-  
-  form{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    width:100%;
-  }
-  
-  #button__next{
-    background-image: linear-gradient(to right top, #06d5f7, #b4ee0e);
-    border-style: none;
-    
-      font-size: 18px;
-  }
-
-  &__navigation {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-  }
-
-  &__navigation--liste {
+  &__row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    width: 450px;
+
   }
 
-  
-  
-  .contact__navigation--line {
-    border-bottom: 1px solid $fourthColor;
-    width: 135px;
-    
-  }
-
-  &__navigation--etape{
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    background-color: $fifthColor;
-    border: 1px solid black;
+  &__col {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    width: 200px;
   }
+}
 
-  
+.half__width {
+  width: 200px;
+}
 
-  &__choix--liste {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-  }
 
-  &__choix--cible {
-    border: 1px solid $fourthColor;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 5px;
-    width: 350px;
-    height: 50px;
+//Inputs
+
+input[type="radio"].choix {
+  display: none;
+
+}
+
+input[type="radio"].choix+label {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid $secondaryColor;
+  width: 440px;
+  height: 40px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+
+  &:hover {
+    scale: 1.02;
     cursor: pointer;
+  }
+}
+
+input[type="radio"].choix:checked+label {
+  border: 1px solid $secondaryColor;
+  background-color: $secondaryColor;
+  color: #fff;
+}
+
+input {
+
+  height: 40px;
+  border-radius: 15px;
+  background: none;
+  border: 2px solid $secondaryColor;
+  padding-left: 15px;
+
+}
+
+textarea {
+  width: 440px;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px;
+}
+
+label {
+  margin-top: 15px;
+  color: $secondaryColor;
+}
+
+#inputPDF{
+  border: none;
+}
+
+
+
+//Boutons
+
+
+.button {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: 2px solid $secondaryColor;
+  color: $secondaryColor;
+  cursor: pointer;
+  margin: 0 20px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 18px;
+
+  &:hover {
+    scale: 1.05;
+  }
+
+  &__next {
+    background-color: $secondaryColor;
+    color: #fff;
+  }
+
+  &__submit {
+    position: relative;
+    left: 30%;
+    margin-top: 50px;
+    background-color: $secondaryColor;
+    color: #fff;
 
     &:hover {
-      background-color: $primaryColor;
-      border:none;
       scale: 1.05;
     }
   }
-  &__form--entreprises-syndic,
-  &__form--particuliers,
-  &__form--projet {
+
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+}
+
+
+
+
+//Validation des champs
+
+.valid {
+  background-color: #94dc1f25;
+}
+
+.error-msg {
+  color: #900;
+  font-size: 12px;
+  padding-left: 15px;
+}
+
+
+.formulaire__element {
+  display: flex;
+  flex-direction: column;
+}
+
+// Modifications pour le formulaire 2
+
+#twoNumbers {
+  justify-content: center;
+}
+
+#formQuestion {
+  transform: translate(94%);
+}
+
+
+@media only screen and (max-width:1130px) {
+
+  .choixFormulaire {
+
+    margin: auto;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    width:100%;
-  }
-  
- 
-  &__form--question{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-  }
-  
-  &__submit {
-    margin-top:25px;    
-    width: 100px;
-    background-image: linear-gradient(to right top, #06d5f7, #b4ee0e);
-    border: none;    
-    border-radius: 5px;
-    font-size:18px;
-    display:flex;
-   
-    &:hover{
-      scale:1.05;
-      color:$fifthColor;
-    }
-    
-  }
+    text-align: center;
+    margin-bottom: 100px;
 
+
+
+  }
 }
-
- #inputPDF{
-      border-style: none;
-      
-      
-        &:hover{
-          background-color:$fifthColor;
-        }
-    }
-
-.inputTEL{
-  width: 150px;
-}
-
- .contact__row{
-    display:flex;
-    justify-content: space-between;
-  }
-    .contact__col{
-      display:flex;
-      flex-direction: column;
-      
-    }
