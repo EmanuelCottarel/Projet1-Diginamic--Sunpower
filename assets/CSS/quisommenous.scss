@@ -108,16 +108,16 @@ h2 {
 
   }
 
-  &__overlay{
-    
+  &__overlay {
+
     width: 100%;
     height: 100%;
     padding: 8px;
     background: #00000070;
-    color:$fifthColor;
-      
-    }
+    color: $fifthColor;
+
   }
+}
 
 
 
@@ -178,12 +178,12 @@ h2 {
 
   }
 
-  
+
   .fondateurs__cartes {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
-  
+
+
 }

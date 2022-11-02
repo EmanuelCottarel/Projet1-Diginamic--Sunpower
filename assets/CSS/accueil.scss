@@ -46,13 +46,13 @@ main {
 
 }
 
-.main__text{
+.main__text {
     width: 100%;
     text-align: center;
-    margin-top:50px;
+    margin-top: 50px;
 
     q {
-    
+
         padding-top: 50px;
         font-size: 30px;
         font-weight: 600;
@@ -61,89 +61,89 @@ main {
 
 
 
-    .cards {
-        width: 100%;
-        margin-bottom: 50px;
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+.cards {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+
+
+    &:hover {
+        scale: 1.02;
+        box-shadow: 5px 5px 1px #95959550;
     }
 
-    .card {
+
+
+    &__text {
+        width: 50%;
+        height: 250px;
+
+    }
+
+    #card1 {
+        background-image: url("../images/ombriere.jpg");
+    }
+
+    #card2 {
+        background-image: url("../images/ingenieur.jpg");
+
+    }
+
+
+    &__img {
+        width: 50%;
+        height: 250px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        margin-bottom: 50px;
-
-
-        &:hover {
-            scale: 1.02;
-            box-shadow: 5px 5px 1px #95959550;
-        }
+        justify-content: end;
 
 
 
-        &__text {
-            width: 50%;
+        &__overlay {
+            width: 20%;
             height: 250px;
-
-        }
-
-        #card1 {
-            background-image: url("../images/ombriere.jpg");
-        }
-
-        #card2 {
-            background-image: url("../images/ingenieur.jpg");
-
-        }
-
-
-        &__img {
-            width: 50%;
-            height: 250px;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
-
-
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-
+            background-color: #00000060;
             display: flex;
-            justify-content: end;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
 
+            a {
+                display: block;
+                width: 80%;
+            }
 
-
-            &__overlay {
-                width: 20%;
-                height: 250px;
-                background-color: #00000060;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                justify-content: center;
-
-                a{
-                    display: block;
-                    width: 80%;
-                }
-
-            img{
+            img {
                 width: 100%;
             }
 
-                &:hover {
-                    img {
-                        scale: 1.1;
-                    }
+            &:hover {
+                img {
+                    scale: 1.1;
                 }
-
             }
 
         }
 
     }
+
+}
 
 
 
@@ -206,8 +206,8 @@ main {
         width: 95%;
     }
 
-    .card__text{
-        ul{
+    .card__text {
+        ul {
             padding-left: 0;
         }
     }

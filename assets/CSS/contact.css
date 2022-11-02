@@ -25,7 +25,7 @@ main {
 }
 
 .container {
-  width: 450px;
+  width: 350px;
   height: auto;
   padding: 5px;
   margin: auto;
@@ -70,17 +70,17 @@ main {
 
 .line {
   border-bottom: 1px solid #94DC1F;
-  width: 128px;
+  width: 80px;
   margin: 0;
 }
 
 form {
-  width: 450px;
+  width: 350px;
   height: auto;
   position: relative;
   display: flex;
   justify-content: space-around;
-  transform: translate(190%);
+  transform: translate(215%);
   transition: transform 330ms ease-in-out;
 }
 form h2 {
@@ -100,16 +100,16 @@ form h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 450px;
+  width: 350px;
 }
 .formulaire__col {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 150px;
 }
 
 .half__width {
-  width: 200px;
+  width: 150px;
 }
 
 input[type=radio].choix {
@@ -119,7 +119,7 @@ input[type=radio].choix {
 input[type=radio].choix + label {
   padding: 0.3rem 0.5rem;
   border: 1px solid #94DC1F;
-  width: 440px;
+  width: 350px;
   height: 40px;
   margin-bottom: 25px;
   border-radius: 15px;
@@ -144,7 +144,7 @@ input {
 }
 
 textarea {
-  width: 440px;
+  width: 345px;
   font-family: "Poppins", sans-serif;
   padding: 8px;
 }
@@ -214,7 +214,7 @@ label {
 }
 
 #formQuestion {
-  transform: translate(94%);
+  transform: translate(108%);
 }
 
 @media only screen and (max-width: 1130px) {

@@ -16,14 +16,6 @@
   <script src="../assets/JS/burger.js" defer></script>
   <script src="../assets/JS/form.js" defer></script>
 
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init("DwZJ4WwVhTbkusxOt");
-    })();
-  </script>
 </head>
 
 <body>
@@ -170,6 +162,9 @@
               title="Indiquez votre numéro de téléphone au format:'0123456789'" required>
           </div>
 
+          <label for="inputPDF">Joindre un fichier PDF</label>
+          <input type="file" id="inputPDF" title="Joindre un fichier PDF" required>
+
         </div>
 
         <!-- Etape 3 du formulaire -->
@@ -187,7 +182,7 @@
         </div>
 
       </form>
-       <!-- Boutons controle du formulaire -->
+      <!-- Boutons controle du formulaire -->
       <div class="buttons">
         <button id="buttonReturn" class="button">Retour</button>
         <button id="buttonNext" class="button button__next">Suivant</button>
@@ -341,12 +336,12 @@
           <li>
             <h5>Menu de navigation</h5>
           </li>
-          <li><a href="./index.html">Accueil</a></li>
-          <li><a href="./pages/ombrieresolaire.html">Ombrières solaires</a></li>
-          <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
-          <li><a href="./pages/activites.html">Activités</a></li>
-          <li><a href="./pages/partenaires.html">Partenaires</a></li>
-          <li><a href="./pages/contact.html">Contact</a></li>
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="./ombrieresolaire.html">Ombrières solaires</a></li>
+          <li><a href="./quisommenous.html">Qui sommes nous?</a></li>
+          <li><a href="./activites.html">Activités</a></li>
+          <li><a href="./partenaires.html">Partenaires</a></li>
+          <li><a href="./contact.html">Contact</a></li>
         </ul>
         <!-- FIN LISTE MENU DE NAVIGATION -->
       </div>
@@ -360,14 +355,14 @@
           <li>
             <h5>Plan du site</h5>
           </li>
-          <li><a href="./index.html">Accueil</a></li>
-          <li><a href="./pages/ombrieresolaire.html">Ombrières solaires</a></li>
-          <li><a href="./pages/quisommenous.html">Qui sommes nous?</a></li>
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="./ombrieresolaire.html">Ombrières solaires</a></li>
+          <li><a href="./quisommenous.html">Qui sommes nous?</a></li>
           <li><a href="#">Actualités</a></li>
-          <li><a href="./pages/activites.html">Activités</a></li>
-          <li><a href="./pages/partenaires.html">Partenaires</a></li>
-          <li><a href="./pages/contact.html">Contact</a></li>
-          <li><a href="#info">Informations utiles</a></li>
+          <li><a href="./activites.html">Activités</a></li>
+          <li><a href="./partenaires.html">Partenaires</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="#">Informations utiles</a></li>
           <li><a href="#">Mentions légales</a></li>
         </ul>
         <!-- FIN LISTE PLAN DU SITE -->

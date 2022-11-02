@@ -120,7 +120,7 @@ function goLeft() {
   if (swipe === 1) {
     form.style.transform = "translate(0)";
   } else if (swipe === 2) {
-    form.style.transform = "translate(-190%)";
+    form.style.transform = "translate(-215%)";
   }
 }
 
@@ -129,7 +129,7 @@ function goRight() {
   if (swipe === 1) {
     form.style.transform = "translate(0)";
   } else if (swipe === 0) {
-    form.style.transform = "translate(190%)";
+    form.style.transform = "translate(215%)";
   }
 }
 
@@ -198,14 +198,14 @@ function displayButtonQuestion() {
 //Fonction permettant de décaler le formulaire sur la droite
 function goRightQuestion() {
   if (swipeQuestion === 1) {
-    formulaireQuestion.style.transform = "translate(-94%)";
+    formulaireQuestion.style.transform = "translate(-108%)";
   }
 }
 
 //Fonction permettant de décaler le formulaire sur la gauche
 function goLeftQuestion() {
   if (swipeQuestion === 0) {
-    formulaireQuestion.style.transform = "translate(94%)";
+    formulaireQuestion.style.transform = "translate(108%)";
   }
 }
 
