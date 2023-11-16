@@ -1,11 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Poppins&family=Space+Mono&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins/Poppins-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+}
+
 html {
   font-size: 16px;
-  font-family: "Poppins", sans-serif;
+   font-family: 'Poppins', 'Roboto', sans-serif;
 }
 
 body {
@@ -49,6 +59,7 @@ body {
 }
 .nav__main--menu li:nth-child(6):hover {
   background-color: #94DC1F;
+  transition: 1s;
 }
 .nav__main--menu a {
   text-decoration: none;
